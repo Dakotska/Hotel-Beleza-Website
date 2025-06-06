@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}        
+
+.bg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 1;
+    overflow: hidden;
+    align-items: center;
+    justify-content:center;
+}
+
+.colors {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    background: linear-gradient(45deg,  #dd1515 10%, #e15617 35%, #e15617 65%, #EB8915 90%);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(247, 247, 247);
+    width: 60%;
+    height: fit-content;
+    border-radius: 30px;
+    padding: 10px 30px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    font-family: "Montserrat";
+}
+
+.form {
+    width: 50%;
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+.input-text {
+    background-color: rgb(222, 222, 222);
+    box-shadow: 0 0 5px black ;
+    border-radius: 12px;
+    height: 36px;
+    width: 80%;
+    padding: 2px 5px;
+    border: none;
+    font-family: "Montserrat";
+    transition: box-shadow 0.5s ease;
+}
+
+.input-text:hover {
+    box-shadow: 0 0 5px rgb(126, 126, 126);
+}
+
+.input-text:focus {
+    background-color: rgb(233, 233, 233);
+}
+
+.btns {
+    margin-top: 12px;
+}
+
+.btn {
+    width: 84px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    border-radius: 32px;
+    font-family: "Montserrat";
+    font-weight: bold;
+    color: white;
+    transition: box-shadow 0.5s ease;
+}
+
+.btn-limpiar {
+    background-color: #ff5757;
+}
+
+.btn-ing {
+    background-color: #ff3131;
+}
+
+.btn-reg {
+    width: 100px;
+    background-color: #ff3131;
+}
+
+.btn:hover {
+    box-shadow: 0 0 3px black;
+}
