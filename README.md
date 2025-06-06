@@ -88,7 +88,7 @@ Hotel-Beleza-Website/
 ## 👥 Authors
 
 - Ángel Adrián Barragán Ruiz
-- Khristo Ricardo Rodríguez Valencia
+- Khristo Ricardo Rodriguez Valencia
 
 ---
 
