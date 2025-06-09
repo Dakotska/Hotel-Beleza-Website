@@ -1,16 +1,38 @@
+@media (min-width: 800px) or (min-height: 500px) {
+    :root {
+        --h2-font-size: 1.3em;
+        --h3-font-size: 1em;
+    }
+}
+@media (max-width: 800px) or (max-height: 500px){
+    :root {
+        --h2-font-size: 1.3em;
+        --h3-font-size: 1em;
+    }
+}
+
 body {
     margin: 0;
+    min-width: 600px;
+    min-height: 500px;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
-}        
+}     
+
+h2 {
+    font-size: var(--h2-font-size);
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+    margin-bottom: 0;
+}
 
 .bg {
     width: 100%;
     height: 100%;
     display: flex;
     z-index: 1;
-    overflow: hidden;
     align-items: center;
     justify-content:center;
 }
@@ -18,6 +40,8 @@ body {
 .colors {
     width: 100%;
     height: 100%;
+    min-width: 600px;
+    min-height: 500px;
     z-index: -1;
     position: absolute;
     background: linear-gradient(45deg,  #dd1515 10%, #e15617 35%, #e15617 65%, #EB8915 90%);
@@ -25,22 +49,20 @@ body {
 
 .container {
     display: flex;
+    gap: 10px;
     flex-direction: row;
     background-color: rgb(247, 247, 247);
-    width: 60%;
+    width: 70%;
+    max-width: 800px;
     height: fit-content;
     border-radius: 30px;
-    padding: 10px 30px;
+    padding: 20px 30px;
     box-shadow: 0 0 10px rgb(0, 0, 0);
     font-family: "Montserrat";
 }
 
 .form {
     width: 50%;
-}
-
-h3 {
-    margin-bottom: 0;
 }
 
 .input-text {
@@ -94,4 +116,10 @@ h3 {
 
 .btn:hover {
     box-shadow: 0 0 3px black;
+}
+
+.images {
+    width: 55%;
+    height: 70%;
+    position: absolute;
 }

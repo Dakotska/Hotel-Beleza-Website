@@ -21,10 +21,12 @@
             VALUES('$Reg_Usuario', '$Reg_Nombre', '$Reg_Email', '$Reg_Password');";
             $result = mysqli_query($con, $sql);
             if($result){
-                echo "FUNCA";
+                echo "<script>alert('Usuario," . $Reg_Usuario . ",registrado con exito!');</script>";
+                header("Location: ../index.html");
+                exit;
             } 
             else{
-                    echo "No FUNCA";
+                
             }
         } 
         else{

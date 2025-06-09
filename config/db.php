@@ -8,6 +8,4 @@
         echo "". mysqli_connect_error();
         exit();
     }
-
-    echo"a";
 ?>

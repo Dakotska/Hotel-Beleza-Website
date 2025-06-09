@@ -33,8 +33,8 @@
             <div class="form form_register">
                 <h2>¡Hola, Bienvenido 👋!</h2>
                 <h3>Ingresa tus datos para poder registrarte</h3>
-                <form action="" method="POST">
-                    <h3>Nombre:</h3>
+                <form action="../forms/b_register.php" method="POST">
+                    <h3>Nombre Completo:</h3>
                     <input type="text" class="input-text" name="r_name" id="rname" placeholder="Ingresa tu nombre" maxlength="60" required>
                     <h3>Usuario:</h3>
                     <input type="text" class="input-text" name="r_usu" id="rusu" placeholder="Ingresa tu usuario" maxlength="30" required>
@@ -48,18 +48,10 @@
             </div>
             <div class="images">
                 <div class="img-login img"><img src="" alt=""></div>
-                <div><img src="img-register img" alt=""></div>
+                <div class="img_register img"><img src="" alt=""></div>
             </div>
         </div>
     </div>
-<script type="javascript" src="../assets/js/login.js"></script>
-    <script>
-    fetch('../templates/header.html')
-        .then(res => res.text())
-        .then(data => {
-        document.getElementById('header').innerHTML = data;
-    });
-</script>
 
 </body>
 </html>

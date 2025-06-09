@@ -5,44 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        .hdr{
-            font-family: 'montserrat';
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hdr {
             display: flex;
-            position: absolute;
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0 10px black;
-            backdrop-filter: blur(10px);
-            width: 100%;
-            height: 50px;
-            font-size: 20px;
-            text-decoration: none;
+            justify-content: space-between;
             align-items: center;
-            justify-content: end;
+            background: white;
+            box-shadow: 0 1px 20px rgb(79, 79, 79);
+            height: 50px;
+            padding: 0 20px;
         }
 
-        .img-hdr{
-            display: flex;
-            justify-content: start;
+        .img-hdr img {
+            height: 32px;
         }
 
-        a{
+        .menu-hdr a {
+            margin: 0 10px;
             text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 16px;
         }
 
+        .login-hdr img {
+            height: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 2px solid black;
+            padding: 4px;
+        }
+
+        .menu-hdr {
+            flex-grow: 1;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <header class="hdr">
-        <div class="img-hdr"><a href="../index.html"><img src="../assets/images/Logo_Beleza.png" alt="" width="32px"></a></div>
+        <!-- Imagen a la izquierda -->
+        <div class="img-hdr">
+            <a href="../index.html"><img src="../assets/images/Logo_Beleza.png" alt="Logo"></a>
+        </div>
+
+        <!-- Menú al centro o ligeramente a la derecha -->
         <div class="menu-hdr">
             <a href="">Inicio</a>
             <a href="">Booking</a>
             <a href="">Restaurant</a>
             <a href="">Productos</a>
         </div>
-        
+
+        <!-- Ícono de login a la derecha -->
+        <div class="login-hdr">
+            <a href="login.html"><img src="../assets/images/NoLog.png" alt="Login"></a>
+        </div>
     </header>
 </body>
 </html>
