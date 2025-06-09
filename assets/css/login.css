@@ -1,30 +1,21 @@
-@media (min-width: 800px) or (min-height: 500px) {
-    :root {
-        --h2-font-size: 1.3em;
-        --h3-font-size: 1em;
-    }
-}
-@media (max-width: 800px) or (max-height: 500px){
-    :root {
-        --h2-font-size: 1.3em;
-        --h3-font-size: 1em;
-    }
+html {
+    margin: 0;
 }
 
 body {
     margin: 0;
     min-width: 600px;
-    min-height: 500px;
-    width: 100vw;
-    height: 100vh;
+    min-height: 400px;
+    width: 100%;
+    height: 100%;
 }     
 
 h2 {
-    font-size: var(--h2-font-size);
+    font-size: 1.3em;
 }
 
 h3 {
-    font-size: var(--h3-font-size);
+    font-size: 1em;
     margin-bottom: 0;
 }
 
@@ -34,7 +25,7 @@ h3 {
     display: flex;
     z-index: 1;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
 }
 
 .colors {
@@ -44,6 +35,7 @@ h3 {
     min-height: 500px;
     z-index: -1;
     position: absolute;
+    overflow: hidden;
     background: linear-gradient(45deg,  #dd1515 10%, #e15617 35%, #e15617 65%, #EB8915 90%);
 }
 
@@ -119,7 +111,10 @@ h3 {
 }
 
 .images {
-    width: 55%;
-    height: 70%;
+    width: 50%;
+    translate: -30px -20px;
+    min-width: 235px;
+    height: calc(100% - 10px);
     position: absolute;
+    border-radius: 30px;
 }
