@@ -20,11 +20,22 @@
             background: white;
             box-shadow: 0 1px 20px rgb(79, 79, 79);
             height: 50px;
-            padding: 0 20px;
+            padding: 0;
+            position: fixed;
+            width: 100%;
+        }
+
+        .img-hdr {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .img-hdr img {
-            height: 32px;
+            height: 40px;
+            width: 40px;
+            padding-left: 5px;
+
         }
 
         .menu-hdr a {
@@ -58,15 +69,15 @@
 
         <!-- Menú al centro o ligeramente a la derecha -->
         <div class="menu-hdr">
-            <a href="">Inicio</a>
-            <a href="">Booking</a>
-            <a href="">Restaurant</a>
-            <a href="">Productos</a>
+            <a href="pagPrincipal.html">Inicio</a>
+            <a href="pages/booking.html">Booking</a>
+            <a href="pages/restaurant.html">Restaurant</a>
+            <a href="pages/rooms.html">Productos</a>
         </div>
 
         <!-- Ícono de login a la derecha -->
         <div class="login-hdr">
-            <a href="login.html"><img src="../assets/images/NoLog.png" alt="Login"></a>
+            <a href="pages/login.html"><img src="../assets/images/NoLog.png" alt="Login"></a>
         </div>
     </header>
 </body>

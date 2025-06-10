@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    height: 200vh;
+    width: 100%;
+}
+
+.section-one{
+    background-image: url('https://paradisevillage.com.mx/nuevo-vallarta/img/rooms/all-inclusive-puerto-vallarta-hotel.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(px);
+    width: 100%;
+    height: 75vh;
+}

@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hotel Beleza</title>
-    </head>
-    <body>
-        Menu
-    
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Beleza</title>
+    <link rel="favicon" href="assets/images/Logo_Beleza.png">
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="gbody">
+        <div class="section-one section">
+            <!--image here-->
+        </div>
+        <div class="section-two section">
+
+        </div>
+        <div class="section-three section">
+
+        </div>
+        <div class="section-four section">
+
+        </div>
+        <div class="section-five section">
+
+        </div>
+    </div>
+
+    <script>
+        fetch('templates/header.html')
+            .then(res => res.text())
+            .then(data => {
+        document.getElementById('header').innerHTML = data;
+    });
+    </script>
+</body>
 </html>
