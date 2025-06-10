@@ -17,7 +17,7 @@
     <div class="colors"></div>
     <div class="bg">
         <div class="container">
-            <div class="form form_login active">
+            <div class="form form-login active">
                 <h2>¡Hola de nuevo! 👋</h2>
                 <h3>Ingresa tus datos abajo para iniciar sesion</h3>
                     <form action="../forms/b_login.php" method="POST">
@@ -28,9 +28,9 @@
                         <div class="btns"><input class="btn btn-limpiar" type="reset" value="Limpiar">
                         <input class="btn btn-ing" type="submit" value="Ingresar"></div>
                     </form>
-                <h3>¿Todavia no estas registrado? <a  onclick="smoothChange()">¡Hazlo aqui!</a></h3>
+                <h3>¿Todavia no estas registrado? <a class="underline-offset" style="cursor: pointer;" onclick="smoothChange()">¡Hazlo aqui!</a></h3>
             </div>
-            <div class="form form_register">
+            <div class="form form-register no-active">
                 <h2>¡Hola, Bienvenido 👋!</h2>
                 <h3>Ingresa tus datos para poder registrarte</h3>
                 <form action="../forms/b_register.php" method="POST">
@@ -42,16 +42,23 @@
                     <input type="email" class="input-text" name="r_email" id="remail" placeholder="Ingresa tu email" maxlength="90" required>
                     <h3>Contraseña:</h3>
                     <input type="password" class="input-text" name="r_pass" id="rpass" placeholder="Ingresa tu contraseña" maxlength="75" required>
+                    <h5 style="margin-top: 10px;">¿Ya tienes cuenta? <a style="cursor: pointer;" onclick="smoothChange()">Inicia sesión!</a></h5>
                     <div class="btns"><input class="btn btn-limpiar" type="reset" value="Limpiar">
                     <input class="btn btn-reg " type="submit" value="Registrarte"></div>
                 </form>
             </div>
             <div class="images login">
                 <div class="img-login img active"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/92/0c/35/view-from-our-unit.jpg?w=1200&h=-1&s=1" alt=""></div>
-                <div class="img_register img no-active"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/92/0c/35/view-from-our-unit.jpg?w=1200&h=-1&s=1" ></div>
+                <div class="img-register img no-active"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/92/0c/35/view-from-our-unit.jpg?w=1200&h=-1&s=1"></div>
             </div>
         </div>
     </div>
-
+    
+    <?php if (isset($_GET["error"]) && $_GET["error"] == 1) { ?>
+        <script>alert("Usuario y/o Contraseña incorrectos");</script>
+    <?php } else if (isset($_GET["error"]) && $_GET["error"] == 2) { 
+        echo "" . mysqli_connect_error; ?>
+        <script>alert("Usuario ya existente")</script>
+    <?php } ?>
 </body>
 </html>
