@@ -6,9 +6,10 @@
         <title>DB Creada</title>
     </head>
     <body>
+        
         <a href="../admin/panel.html">Volver a Inicio</a>
         <?php
-
+            
             $host = "localhost";
             $usuario = "root";
             $pass = "";
