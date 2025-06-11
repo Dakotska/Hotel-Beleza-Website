@@ -85,11 +85,4 @@ Hotel-Beleza-Website/
 
 ---
 
-## 👥 Authors
-
-- Ángel Adrián Barragán Ruiz
-- Khristo Ricardo Rodriguez Valencia
-
----
-
 > 💡 *Este proyecto es de carácter académico y está en desarrollo.*
