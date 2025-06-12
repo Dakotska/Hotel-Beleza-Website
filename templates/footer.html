@@ -14,10 +14,10 @@
         }
 
         footer{
-            width: calc(100% - 50px*2);
-            height: 50vh;
+            width: 100%;
+            height: 40vh;
             padding: 20px 50px;
-            border: 1px solid red;
+            background-color: #ac6e47;
         }
 
         .up-cards{
@@ -26,13 +26,11 @@
             margin-bottom: 10px;
         }
 
-        .tarjeta{
-            border: 1px solid green;
-        }
-
         .beleza-description{
             height: 100%;
             width: 35%;
+            color: #e0e0e0;
+            transition: color 0.3s ease;
         }
 
         .links{
@@ -40,8 +38,24 @@
             width: 20%;
         }
 
-        .links p{
+        .links h2{
+            color: white;
+        }
+
+
+        .links li{
+            margin-top: 5px;
+        }
+
+        .hr{
+            color: #e0e0e0;
             text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .hr:hover{
+            color: white;
+            font-weight: 600;
         }
 
         .social-icons ul{
@@ -50,25 +64,57 @@
             justify-content: space-between;
             gap: 10px;
         }
-        
-        .social-icons img{
-            width: 32px;
-            height: 32px;
+
+        .social-icons h2{
+            color: white;
+            margin-bottom: 10px;
         }
 
         .I-P{
             margin-top: 10px;
             display: flex;
             justify-content: space-between;
+            color: #e0e0e0;
         }
 
         .left-text{
             display: flex;
             gap: 20px;
         }
-        
+
+        #lt1{
+            transition: color 0.3s ease;
+            transition: font-weight 0.3s ease;
+            cursor: pointer;
+        }
+
+        #lt2{
+            transition: color 0.3s ease;
+            transition: font-weight 0.3s ease;
+            cursor: pointer;
+        }
+
+        #lt1:hover{
+            color: white;
+            font-weight: 500;
+        }
+
+        #lt2:hover{
+            color: white;
+            font-weight: 500;
+        }
+
         li{
             list-style: none;
+        }
+
+        .svg-icon{
+            color: #e0e0e0;
+            transition: color 0.3s ease;
+        }
+
+        .svg-icon:hover{
+            color: white;
         }
     </style>
 </head>
@@ -76,50 +122,243 @@
     <footer>
         <div class="up-cards">
             <div class="beleza-description tarjeta">
-                <img src="../assets/images/Logo_Beleza.png" alt="" width="64" height="64">
+                <img src="../assets/images/Logo_Beleza.png" alt="" width="96" height="96">
                 <p>
                     <strong>Hotel Beleza</strong>, fundado en 1995, combina elegancia y confort para ofrecer una experiencia de hospedaje única. Con años de trayectoria, nos especializamos en brindar un servicio cálido y personalizado en un ambiente tranquilo y sofisticado.
                 </p>
             </div>
             <div class="links tarjeta">
-                Links
+                <h2>Links</h2>
                 <ul>
-                    <a href="/">
+                    <a href="/" class="hinicio hr">
                         <li><p>Inicio</p></li>
                     </a>
-                    <a href="/pages/booking.html">
+                    <a href="/pages/booking.html" class="hbooking hr">
                         <li><p>Booking</p></li>
                     </a>
-                    <a href="/pages/restaurant.html">
+                    <a href="/pages/restaurant.html" class="hrestaurant hr">
                         <li><p>Restaurant</p></li>
                     </a>
-                    <a href="/pages/productos.html">
+                    <a href="/pages/productos.html" class="hproductos hr">
                         <li><p>Productos</p></li>
                     </a>
-                    <a href="/pages/login.php">
+                    <a href="/pages/login.php" class="hlogin hr">
                         <li><p>Login</p></li>
                     </a>
                 </ul>
             </div>
             <div class="social-icons tarjeta">
+                <h2>Nuestras redes</h2>
                 <ul>
                     <a href="https://www.instagram.com/">
-                        <li><img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt=""></li>
+                        <li>
+                            <?xml version="1.0" standalone="no"?>
+                            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+                            "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                            <svg class="svg-icon" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                            width="32.000000pt" height="32.000000pt" viewBox="0 0 512.000000 512.000000"
+                            preserveAspectRatio="xMidYMid meet">
+                            <metadata>
+                            Created by potrace 1.16, written by Peter Selinger 2001-2019
+                            </metadata>
+                            <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                            fill="currentColor" stroke="none">
+                            <path d="M1230 5113 c-346 -56 -583 -175 -816 -407 -167 -167 -270 -330 -342
+                            -541 -71 -208 -67 -111 -67 -1605 0 -1494 -4 -1397 67 -1605 72 -211 175 -374
+                            342 -541 167 -167 330 -270 541 -342 208 -71 111 -67 1605 -67 1494 0 1397 -4
+                            1605 67 211 72 374 175 541 342 167 167 270 330 342 541 71 208 67 111 67
+                            1605 0 1494 4 1397 -67 1605 -72 211 -175 374 -342 541 -167 167 -330 270
+                            -541 342 -209 71 -94 66 -1575 68 -734 1 -1346 0 -1360 -3z m2658 -473 c195
+                            -39 331 -111 475 -249 150 -143 236 -299 277 -503 19 -93 20 -141 20 -1328 0
+                            -1187 -1 -1235 -20 -1328 -41 -204 -127 -360 -277 -503 -144 -138 -280 -210
+                            -475 -249 -93 -19 -141 -20 -1328 -20 -1187 0 -1235 1 -1328 20 -195 39 -331
+                            111 -475 249 -150 143 -236 299 -277 503 -19 93 -20 141 -20 1328 0 1187 1
+                            1235 20 1328 41 204 127 360 277 503 143 137 279 209 471 249 82 17 165 19
+                            1325 19 1195 1 1242 0 1335 -19z"/>
+                            <path d="M3849 4257 c-107 -31 -192 -107 -230 -206 -29 -77 -24 -194 12 -265
+                            125 -254 488 -252 607 2 23 49 27 70 27 147 0 101 -17 149 -80 223 -73 85
+                            -226 130 -336 99z"/>
+                            <path d="M2331 3864 c-112 -19 -277 -75 -378 -129 -269 -143 -453 -332 -583
+                            -600 -100 -207 -125 -322 -125 -575 0 -253 25 -368 125 -575 136 -280 335
+                            -479 615 -615 207 -100 322 -125 575 -125 253 0 368 25 575 125 171 83 301
+                            181 417 315 89 102 137 175 198 300 100 207 125 322 125 575 0 194 -12 281
+                            -57 415 -27 81 -108 247 -155 317 -203 303 -530 515 -883 573 -117 18 -334 18
+                            -449 -1z m447 -474 c305 -86 526 -308 614 -617 32 -112 32 -314 0 -426 -89
+                            -311 -308 -530 -619 -619 -112 -32 -314 -32 -426 0 -311 89 -530 308 -619 619
+                            -32 112 -32 314 0 426 97 339 355 574 700 637 78 15 268 4 350 -20z"/>
+                            </g>
+                            </svg>
+                        </li>
                     </a>
                     <a href="https://www.facebook.com/">
-                        <li><img src="https://cdn-icons-png.flaticon.com/512/1384/1384085.png" alt=""></li>
+                        <li>
+                            <?xml version="1.0" standalone="no"?>
+                            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+                            "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                            <svg class="svg-icon" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                            width="32.000000pt" height="32.000000pt" viewBox="0 0 512.000000 512.000000"
+                            preserveAspectRatio="xMidYMid meet">
+                            <metadata>
+                            Created by potrace 1.16, written by Peter Selinger 2001-2019
+                            </metadata>
+                            <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                            fill="currentColor" stroke="none">
+                            <path d="M435 5101 c-205 -60 -367 -225 -420 -428 -13 -50 -15 -326 -15 -2111
+                            0 -2280 -5 -2102 67 -2246 47 -93 152 -199 248 -248 142 -73 -36 -68 2245 -68
+                            2278 0 2100 -5 2244 67 96 48 201 153 249 249 72 144 67 -34 67 2244 0 2278 5
+                            2100 -67 2244 -48 96 -153 201 -249 249 -144 72 35 67 -2250 66 -1931 0 -2063
+                            -2 -2119 -18z m4170 -407 c46 -25 65 -45 91 -94 18 -34 19 -100 19 -2040 0
+                            -1940 -1 -2006 -19 -2040 -26 -49 -45 -69 -91 -94 -39 -21 -48 -21 -652 -24
+                            l-613 -3 0 731 0 730 323 0 323 0 33 277 c18 153 35 293 38 311 l5 32 -362 0
+                            -362 0 4 368 c3 358 4 368 26 417 30 66 93 128 156 156 48 21 68 23 309 27
+                            l257 4 0 293 0 292 -127 14 c-71 8 -209 14 -308 14 -196 0 -248 -10 -393 -76
+                            -253 -114 -457 -361 -522 -630 -18 -77 -20 -118 -20 -481 l0 -398 -325 0 -325
+                            0 0 -310 0 -310 325 0 325 0 0 -730 0 -731 -1082 3 c-1036 3 -1085 4 -1118 22
+                            -49 26 -69 45 -94 91 l-21 40 0 2005 c0 1940 1 2006 19 2040 35 66 75 96 146
+                            111 19 4 926 6 2015 5 l1980 -1 40 -21z"/>
+                            </g>
+                            </svg>
+                        </li>
                     </a>
                     <a href="https://www.whatsapp.com/">
-                        <li><img src="https://cdn-icons-png.flaticon.com/512/1384/1384095.png" alt=""></li>
+                        <li>
+                            <?xml version="1.0" standalone="no"?>
+                            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+                            "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                            <svg class="svg-icon" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                            width="32.000000pt" height="32.000000pt" viewBox="0 0 512.000000 512.000000"
+                            preserveAspectRatio="xMidYMid meet">
+                            <metadata>
+                            Created by potrace 1.16, written by Peter Selinger 2001-2019
+                            </metadata>
+                            <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                            fill="currentColor" stroke="none">
+                            <path d="M2255 5109 c-472 -57 -939 -254 -1315 -555 -109 -88 -296 -275 -384
+                            -384 -300 -375 -478 -797 -542 -1280 -22 -172 -15 -557 14 -710 52 -272 129
+                            -506 238 -721 19 -38 34 -76 34 -85 0 -15 -284 -1319 -296 -1356 -4 -12 0 -18
+                            11 -18 10 0 325 70 701 156 l685 155 127 -54 c233 -100 471 -166 722 -199 143
+                            -19 509 -16 655 6 577 84 1065 327 1470 731 394 394 640 884 722 1440 24 167
+                            24 534 0 695 -45 294 -122 533 -253 791 -128 251 -276 453 -488 664 -374 372
+                            -830 608 -1356 702 -127 22 -178 26 -405 29 -143 1 -296 -2 -340 -7z m595
+                            -415 c969 -127 1751 -936 1850 -1913 91 -904 -440 -1791 -1291 -2154 -588
+                            -251 -1249 -232 -1815 54 l-131 66 -457 -104 c-252 -58 -459 -103 -461 -101
+                            -2 2 42 207 96 455 l100 453 -60 107 c-155 277 -252 599 -270 895 -43 721 277
+                            1402 864 1838 452 336 1006 478 1575 404z"/>
+                            <path d="M1705 3701 c-85 -22 -178 -115 -245 -242 -52 -99 -72 -189 -73 -314
+                            0 -194 74 -380 252 -633 139 -197 205 -277 345 -417 247 -247 446 -373 768
+                            -489 257 -92 424 -121 573 -98 137 22 322 136 380 236 56 95 85 305 48 339
+                            -24 21 -455 233 -516 253 -26 9 -59 13 -72 10 -15 -4 -60 -51 -118 -124 -128
+                            -160 -150 -182 -182 -182 -39 0 -244 101 -357 176 -164 109 -329 279 -448 459
+                            -86 132 -86 129 15 235 68 72 115 153 115 200 0 30 -184 489 -214 536 -30 45
+                            -63 58 -155 61 -47 1 -99 -1 -116 -6z"/>
+                            </g>
+                            </svg>
+                        </li>
                     </a>
                     <a href="https://www.tiktok.com/es/">
-                        <li><img src="https://cdn-icons-png.flaticon.com/512/1946/1946552.png" alt=""></li>
+                        <li>
+                            <?xml version="1.0" standalone="no"?>
+                            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+                            "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                            <svg class="svg-icon" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                            width="32.000000pt" height="32.000000pt" viewBox="0 0 512.000000 512.000000"
+                            preserveAspectRatio="xMidYMid meet">
+                            <metadata>
+                            Created by potrace 1.16, written by Peter Selinger 2001-2019
+                            </metadata>
+                            <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                            fill="currentColor" stroke="none">
+                            <path d="M2636 5101 c-16 -11 -38 -34 -50 -53 l-21 -33 -5 -1730 c-4 -1415 -8
+                            -1737 -19 -1770 -81 -242 -301 -405 -545 -405 -82 0 -204 32 -275 72 -72 41
+                            -178 147 -219 219 -40 71 -72 193 -72 275 0 269 210 519 467 555 145 21 177
+                            29 201 51 53 50 52 44 52 519 0 435 0 442 -22 480 -14 26 -37 46 -67 61 -44
+                            21 -49 21 -185 10 -78 -7 -183 -21 -234 -32 -571 -121 -1052 -549 -1237 -1103
+                            -69 -206 -79 -274 -79 -542 -1 -229 1 -246 28 -360 155 -662 642 -1141 1309
+                            -1287 90 -20 130 -23 337 -22 205 0 248 3 334 22 338 75 636 240 866 478 248
+                            256 388 532 458 899 12 66 16 220 19 897 2 450 6 818 7 818 2 0 46 -20 97 -44
+                            241 -114 558 -186 821 -186 106 0 143 15 178 72 19 32 20 52 20 478 0 404 -2
+                            448 -18 479 -30 60 -58 73 -180 83 -255 19 -467 115 -641 289 -167 167 -260
+                            374 -280 622 -9 115 -26 158 -74 187 -31 19 -53 20 -487 20 -431 0 -457 -1
+                            -484 -19z m752 -354 c36 -235 168 -490 345 -671 181 -184 402 -306 650 -357
+                            l107 -22 0 -247 0 -247 -94 13 c-249 35 -495 128 -723 276 -50 32 -108 62
+                            -127 65 -50 8 -120 -21 -148 -60 l-23 -32 -6 -975 c-5 -851 -8 -985 -22 -1057
+                            -119 -585 -570 -1022 -1150 -1113 -100 -16 -311 -13 -424 5 -569 92 -1038 563
+                            -1129 1135 -25 157 -15 400 21 539 138 532 554 925 1084 1025 46 9 85 16 87
+                            16 2 0 4 -112 4 -249 l0 -249 -67 -16 c-101 -25 -256 -106 -342 -178 -134
+                            -113 -233 -268 -283 -443 -30 -105 -33 -342 -4 -445 87 -317 319 -548 636
+                            -636 102 -28 339 -26 445 4 248 71 444 232 555 457 93 189 84 3 87 1878 l3
+                            1657 253 0 253 0 12 -73z"/>
+                            </g>
+                            </svg>
+                        </li>
                     </a>
                     <a href="https://www.youtube.com/">
-                        <li><img src="https://cdn-icons-png.flaticon.com/512/1077/1077046.png" alt=""></li>
+                        <li>
+                            <?xml version="1.0" standalone="no"?>
+                            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+                            "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                            <svg class="svg-icon" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                            width="32.000000pt" height="32.000000pt" viewBox="0 0 512.000000 512.000000"
+                            preserveAspectRatio="xMidYMid meet">
+                            <metadata>
+                            Created by potrace 1.16, written by Peter Selinger 2001-2019
+                            </metadata>
+                            <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                            fill="currentColor" stroke="none">
+                            <path d="M1700 4489 c-403 -13 -859 -39 -955 -54 -167 -27 -297 -86 -414 -190
+                            -91 -80 -142 -151 -192 -263 -60 -138 -96 -295 -116 -517 -25 -276 -26 -1539
+                            0 -1816 44 -487 171 -731 455 -874 170 -86 363 -110 1097 -135 808 -28 1637
+                            -23 2380 15 431 22 521 36 660 101 198 92 325 244 404 480 83 248 96 434 96
+                            1339 -1 570 -4 734 -17 886 -44 487 -161 722 -438 881 -69 39 -175 74 -280 91
+                            -308 51 -1846 83 -2680 56z m1666 -309 c404 -13 872 -38 953 -51 127 -20 243
+                            -78 312 -157 139 -158 182 -492 182 -1417 0 -605 -20 -965 -63 -1127 -51 -197
+                            -102 -282 -208 -354 -110 -76 -169 -86 -607 -109 -845 -43 -1659 -45 -2620 -5
+                            -545 23 -688 54 -809 175 -84 83 -145 254 -166 458 -45 466 -45 1490 1 1928
+                            12 119 49 258 92 352 60 128 182 219 337 250 77 16 514 42 935 56 361 12 1311
+                            12 1661 1z"/>
+                            <path d="M2058 3430 c-81 -24 -132 -84 -148 -173 -7 -36 -10 -277 -8 -684 l3
+                            -628 25 -45 c38 -67 96 -103 174 -108 58 -4 71 -1 134 31 143 73 1118 600
+                            1144 618 38 28 78 113 78 168 0 55 -27 116 -66 153 -31 28 -1157 647 -1213
+                            666 -38 13 -83 14 -123 2z m508 -561 c192 -105 378 -206 412 -226 l64 -35
+                            -354 -190 c-194 -104 -381 -205 -415 -223 l-63 -35 0 450 c0 248 2 450 4 450
+                            2 0 160 -86 352 -191z"/>
+                            </g>
+                            </svg>
+                        </li>
                     </a>
-                    <a href="https://www.tripadvisor.com.mx/">
-                        <li><img src="https://cdn-icons-png.flaticon.com/512/732/732153.png" alt=""></li>
+                    <a href="https://github.com/Dakotska/Hotel-Beleza-Website">
+                        <li>
+                            <?xml version="1.0" standalone="no"?>
+                            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+                            "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                            <svg class="svg-icon" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                            width="32.000000pt" height="32.000000pt" viewBox="0 0 512.000000 512.000000"
+                            preserveAspectRatio="xMidYMid meet">
+                            <metadata>
+                            Created by potrace 1.16, written by Peter Selinger 2001-2019
+                            </metadata>
+                            <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                            fill="currentColor" stroke="none">
+                            <path d="M757 5105 c-363 -73 -673 -385 -742 -748 -23 -119 -23 -3475 0 -3594
+                            71 -376 399 -694 775 -753 52 -8 227 -10 565 -8 472 3 491 4 517 23 56 42 58
+                            58 58 397 l0 310 -67 -8 c-106 -14 -338 -8 -422 10 -41 8 -102 29 -135 44
+                            -120 57 -184 127 -246 272 -73 166 -173 300 -267 355 -40 24 -113 99 -113 117
+                            0 5 17 16 37 24 55 23 132 11 230 -37 101 -50 170 -114 246 -230 67 -103 150
+                            -183 232 -224 58 -29 64 -30 205 -30 143 0 158 2 267 42 38 14 42 18 48 59 14
+                            98 77 228 134 278 11 11 21 22 21 26 0 4 -30 10 -67 14 -396 40 -734 214 -899
+                            463 -110 165 -174 379 -196 649 -17 218 8 391 78 551 31 70 106 187 147 231
+                            l31 32 -23 88 c-44 166 -38 329 18 511 l27 86 49 3 c67 5 138 -12 264 -63 132
+                            -53 230 -102 320 -160 l70 -46 78 20 c354 90 772 90 1125 0 l78 -19 82 52
+                            c194 121 438 218 552 218 l65 0 30 -97 c59 -190 64 -336 20 -506 l-23 -87 31
+                            -32 c42 -44 116 -161 148 -234 69 -155 94 -333 77 -548 -24 -298 -96 -519
+                            -228 -693 -169 -221 -496 -379 -866 -418 -38 -4 -68 -9 -68 -12 0 -3 17 -24
+                            38 -48 44 -50 85 -129 109 -212 14 -50 18 -129 22 -568 6 -549 6 -546 60 -582
+                            24 -17 68 -18 526 -21 534 -3 581 0 715 49 311 114 555 397 615 712 23 119 23
+                            3475 0 3594 -60 314 -292 585 -606 708 -145 57 -71 55 -1948 54 -1407 -1
+                            -1739 -3 -1794 -14z"/>
+                            </g>
+                            </svg>
+                        </li>
                     </a>
                 </ul>
             </div>
@@ -130,8 +369,8 @@
                 <p>&copy; Hotel Beleza. Todos los derechos reservados.</p>
             </div>
             <div class="left-text">
-                <p>Términos y Condiciones</p>
-                <p>Política de Privacidad</p>
+                <p id="lt1">Términos y Condiciones</p>
+                <p id="lt2">Política de Privacidad</p>
             </div>
         </div>
     </footer>
