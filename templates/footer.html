@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Montserrat';
+            padding: 0;
+            margin: 0;
+        }
+
+        footer{
+            width: calc(100% - 50px*2);
+            height: 50vh;
+            padding: 20px 50px;
+            border: 1px solid red;
+        }
+
+        .up-cards{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .tarjeta{
+            border: 1px solid green;
+        }
+
+        .beleza-description{
+            height: 100%;
+            width: 35%;
+        }
+
+        .links{
+            height: 100%;
+            width: 20%;
+        }
+
+        .links p{
+            text-decoration: none;
+        }
+
+        .social-icons ul{
+            width: 20%;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        
+        .social-icons img{
+            width: 32px;
+            height: 32px;
+        }
+
+        .I-P{
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-text{
+            display: flex;
+            gap: 20px;
+        }
+        
+        li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <footer>
+        <div class="up-cards">
+            <div class="beleza-description tarjeta">
+                <img src="../assets/images/Logo_Beleza.png" alt="" width="64" height="64">
+                <p>
+                    <strong>Hotel Beleza</strong>, fundado en 1995, combina elegancia y confort para ofrecer una experiencia de hospedaje única. Con años de trayectoria, nos especializamos en brindar un servicio cálido y personalizado en un ambiente tranquilo y sofisticado.
+                </p>
+            </div>
+            <div class="links tarjeta">
+                Links
+                <ul>
+                    <a href="/">
+                        <li><p>Inicio</p></li>
+                    </a>
+                    <a href="/pages/booking.html">
+                        <li><p>Booking</p></li>
+                    </a>
+                    <a href="/pages/restaurant.html">
+                        <li><p>Restaurant</p></li>
+                    </a>
+                    <a href="/pages/productos.html">
+                        <li><p>Productos</p></li>
+                    </a>
+                    <a href="/pages/login.php">
+                        <li><p>Login</p></li>
+                    </a>
+                </ul>
+            </div>
+            <div class="social-icons tarjeta">
+                <ul>
+                    <a href="https://www.instagram.com/">
+                        <li><img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt=""></li>
+                    </a>
+                    <a href="https://www.facebook.com/">
+                        <li><img src="https://cdn-icons-png.flaticon.com/512/1384/1384085.png" alt=""></li>
+                    </a>
+                    <a href="https://www.whatsapp.com/">
+                        <li><img src="https://cdn-icons-png.flaticon.com/512/1384/1384095.png" alt=""></li>
+                    </a>
+                    <a href="https://www.tiktok.com/es/">
+                        <li><img src="https://cdn-icons-png.flaticon.com/512/1946/1946552.png" alt=""></li>
+                    </a>
+                    <a href="https://www.youtube.com/">
+                        <li><img src="https://cdn-icons-png.flaticon.com/512/1077/1077046.png" alt=""></li>
+                    </a>
+                    <a href="https://www.tripadvisor.com.mx/">
+                        <li><img src="https://cdn-icons-png.flaticon.com/512/732/732153.png" alt=""></li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="I-P tarjeta">
+            <div class="right-text">
+                <p>&copy; Hotel Beleza. Todos los derechos reservados.</p>
+            </div>
+            <div class="left-text">
+                <p>Términos y Condiciones</p>
+                <p>Política de Privacidad</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -3,14 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <title>Panel de Admin</title>
         <style>
             body {
                 margin: 0;
                 width: 100%;
+                min-height: 100vh;
                 height: 100%;
-                min-width: 600px;
-                min-height: 400px;
                 background-color: #0B0C10;
                 color: white;
             }
@@ -31,6 +33,7 @@
                 width: auto;
                 margin-left: 12px;
             }
+
             .bg-light {
                 width: 5px;
                 height: 5px;
@@ -47,16 +50,23 @@
             }
 
             .track {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
                 width: 90%;
                 height: 100%;
-                margin: 0 5%;
-                padding: 5% 0;
+                margin: 5% 5%;
+            }
+
+            .p-line1 {
+                height: 50%;
             }
 
             .w-container {
                 display: flex;
                 flex-direction: row;
                 width: 100%;
+                height: 200px;
                 border-radius: 32px;
                 background-color: rgba(0, 194, 203, 0.2);
                 box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.3);
@@ -68,12 +78,69 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                font-family: "Montserrat";
+                font-weight: bold;
+                gap: 10%;
             }
             
             .w-container img {
-                max-width: 50%;
-                max-height: 200px;
+                max-width: 650px;
+                width: 50%;
+                height: 100%;
                 border-radius: 32px;
+                object-fit: cover;
+            }
+            
+            .w-span {
+                font-size: 250%;
+            }
+
+            .p-line2 {
+                display: flex;
+                flex-direction: row;
+                gap: 10%;
+            }
+
+            .h-container {
+                background-color: rgba(0, 194, 203, 0.2);
+                width: 45%;
+                height: 180px;
+                box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.3);
+                border-radius: 20px;
+                display: flex;
+            }
+
+            .h-container img {
+                width: 50%;
+                height: 100%;
+                border-radius: 20px;
+                object-fit: cover;
+            }
+
+            .h-container div {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-family: "Montserrat";
+                font-weight: bold;
+                gap: 10%;
+            }
+
+            .h-span {
+                font-size: 200%;
+            }
+
+            .btn-a {
+                text-align: center;
+                background-color: none;
+                border: none;
+                text-decoration: none;
+                color: white;
+                border-radius: 20px;
+                width: 70%;
+                height: 48px;
             }
 
         </style>
@@ -82,41 +149,41 @@
         <header class="hdr">
             <a href="../index.html"><img src="../assets/images/Logo_Beleza.png" alt="Logo"></a>
             <div class="a">
-                <a href="panel.html">Inicio</a>
-                <a href="">Habitaciones</a>
-                <a href="">Pedidos</a>
-                <a href="">Usuarios</a>
+                <a class="hdr-a" href="panel.html">Inicio</a>
+                <a class="hdr-a" href="">Habitaciones</a>
+                <a class="hdr-a" href="">Pedidos</a>
+                <a class="hdr-a" href="">Usuarios</a>
             </div>
         </header>
-        <div class="bg-light"></div>
+        
 
         <div class="track">
             <div class="p-line1">
                 <div class="w-container">
                     <img src="../assets/images/main-bg.webp" alt="IMG">
                     <div>
-                        <span>Habitaciones</span>
-                        <a><button>Entrar</button></a>
+                        <span class="w-span">Habitaciones</span>
+                        <a href="" class="btn-a">Entrar</a>
                     </div>
                 </div>
             </div>
             <div class="p-line2">
                 <div class="h-container">
-                    <img src="" alt="">
+                    <img src="../assets/images/main-bg.webp" alt="">
                     <div>
-                        <span>Pedidos</span>
-                        <a href=""><button>Entrar</button></a>
+                        <span class="h-span">Pedidos</span>
+                        <a href="" class="btn-a">Entrar</a>
                     </div>
                 </div>
                 <div class="h-container">
-                    <img src="" alt="">
+                    <img src="../assets/images/main-bg.webp" alt="">
                     <div>
-                        <span>Pedidos</span>
-                        <a href=""><button>Entrar</button></a>
+                        <span class="h-span">Usuarios</span>
+                        <a href="" class="btn-a">Entrar</a>
                     </div>
                 </div>
             </div>
         </div>
-
+        <div class="bg-light"></div>
     </body>
 </html>
