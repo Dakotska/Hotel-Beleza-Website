@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Panel de Admin</title>
+    <style>
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #0B0C10;
+            color: white;
+            overflow: hidden;
+            font-family: "Montserrat";
+        }
+        
+        .track {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            width: 90%;
+            height: 100%;
+            margin: 5% 5%;
+        }
+        
+        .p-line1 {
+            height: 40%;
+        }
+        
+        .w-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 60%;
+            min-height: 200px;
+            border-radius: 32px;
+            background-color: rgba(0, 194, 203, 0.2);
+            box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.3);
+        }
+        
+        .w-container div {
+            width: 50%;
+            display: flex; 
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            gap: 10%;
+        }
+        
+        .w-container img {
+            width: 50%;
+            height: 100%;
+            border-radius: 32px;
+            object-fit: cover;
+        }
+        
+        .w-span {
+            font-size: 250%;
+        }
+        
+        .p-line2 {
+            display: flex;
+            flex-direction: row;
+            height: 40%;
+            gap: 10%;
+        }
+        
+        .h-container {
+            background-color: rgba(0, 194, 203, 0.2);
+            width: 45%;
+            height: 60%;
+            min-height: 150px;
+            box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            display: flex;
+        }
+        
+        .h-container img {
+            width: 50%;
+            height: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        
+        .h-container div {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            gap: 10%;
+        }
+        
+        .h-span {
+            font-size: 200%;
+        }
+        
+        .btn-a {
+            text-align: center;
+            background-color: none;
+            border: none;
+            text-decoration: none;
+            color: white;
+            border-radius: 20px;
+            width: 70%;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: box-shadow 0.5s ease, background-color 0.3s ease, border 0.3s ease;
+        }
+        
+        .w-container:hover div .btn1 {
+            border: 2px solid white;
+            box-shadow: 0 0 12px 4px white;
+        }
+        
+        .btn1:hover {
+            background-color: white;
+            color: black;
+        }
+        
+        .h-1:hover div .btn2 {
+            border: 2px solid white;
+            box-shadow: 0 0 12px 4px white;
+        }
+        
+        .btn2:hover {
+            background-color: white;
+            color: black;
+        }
+        
+        .h-2:hover div .btn3 {
+            border: 2px solid white;
+            box-shadow: 0 0 12px 4px white;
+        }
+        
+        .btn3:hover {
+            background-color: white;
+            color: black;
+        }
+        
+    </style>
+</head>
+<body>
+    <header id="header"></header> 
+    
+    <div class="track">
+        <div class="p-line1">
+            <div class="w-container">
+                <img src="../../assets/images/main-bg.webp" alt="IMG">
+                <div>
+                    <span class="w-span">Habitaciones</span>
+                    <a  href="" class="btn-a btn1">Entrar</a>
+                </div>
+            </div>
+        </div>
+        <div class="p-line2">
+            <div class="h-container h-1">
+                <img src="../../assets/images/main-bg.webp" alt="">
+                <div>
+                    <span class="h-span">Pedidos</span>
+                    <a href="" class="btn-a btn2">Entrar</a>
+                </div>
+            </div>
+            <div class="h-container h-2">
+                <img src="../../assets/images/main-bg.webp" alt="">
+                <div>
+                    <span class="h-span">Usuarios</span>
+                    <a href="" class="btn-a btn3">Entrar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        fetch('../templates/header.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data; 
+            
+            const a1 = document.querySelector(".hdr-a1");
+            const a2 = document.querySelector(".hdr-a2");
+            const a3 = document.querySelector(".hdr-a3");
+            const a4 = document.querySelector(".hdr-a4");
+            const light = document.querySelector(".bg-light");
+            
+            a1.addEventListener("mouseenter", () => {
+                light.classList.add("active1");
+            });
+            a1.addEventListener("mouseleave", () => {
+                light.classList.remove("active1")
+            });
+            
+            a2.addEventListener("mouseenter", () => {
+                light.classList.add("active2")
+            });
+            a2.addEventListener("mouseleave", () => {
+                light.classList.remove("active2")
+            });
+            
+            a3.addEventListener("mouseenter", () => {
+                light.classList.add("active3")
+            });
+            a3.addEventListener("mouseleave", () => {
+                light.classList.remove("active3")
+            });
+            
+            a4.addEventListener("mouseenter", () => {
+                light.classList.add("active4")
+            });
+            a4.addEventListener("mouseleave", () => {
+                light.classList.remove("active4")
+            });
+        });
+        
+    </script>
+</body>
+</html>

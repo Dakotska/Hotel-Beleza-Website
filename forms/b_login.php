@@ -22,7 +22,7 @@
         }
     }
     if ($adminLoginState) {
-            header("Location: ../admin/panel.html");
+            header("Location: ../admin/pages/panel.html");
             exit;
         } else if ($loginState) {
             header("Location: ../index.html");

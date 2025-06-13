@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .bd1 {
+            margin: 0;
+            width: 100%;
+            height: 48px;
+            background-color: #0B0C10;
+            color: white;
+            overflow: hidden;
+        }
+        
+        .hdr {
+            position: sticky;
+            z-index: 6;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .hdr img {
+            height: 100%;
+            width: 45px;
+        }
+        
+        .a {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .hdr-a {
+            color: white;
+            text-decoration: none;
+            font-size: large;
+            width: fit-content;
+        }
+        
+        .hdr-a1 {
+            transition: font-weight 0.5s ease, text-shadow 1s ease 0.3s;
+        }
+        
+        .hdr-a1:hover {
+            font-weight: bold;
+            text-shadow: 
+            0 0 25px rgba(200, 200, 200, 1),
+            0 20px 6px rgba(0, 0, 0, 0.7);
+        }
+        
+        .hdr-a2 {
+            transition: font-weight 0.5s ease, text-shadow 1s ease 0.3s;
+        }
+        
+        .hdr-a2:hover {
+            font-weight: bold;
+            text-shadow: 
+            0 0 25px rgba(200, 200, 200, 1),
+            0 20px 6px rgba(0, 0, 0, 0.7);
+        }
+        
+        .hdr-a3 {
+            transition: font-weight 0.5s ease, text-shadow 1s ease 0.3s;
+        }
+        
+        .hdr-a3:hover {
+            font-weight: bold;
+            text-shadow: 
+            0 0 25px rgba(200, 200, 200, 1),
+            0 20px 6px rgba(0, 0, 0, 0.7);
+        }
+        
+        .hdr-a4 {
+            transition: font-weight 0.5s ease, text-shadow 1s ease 0.3s;
+        }
+        
+        .hdr-a4:hover {
+            font-weight: bold;
+            text-shadow: 
+            0 0 25px rgba(200, 200, 200, 1),
+            0 20px 6px rgba(0, 0, 0, 0.7);
+        }
+        
+        .bg-light {
+            width: 5px;
+            height: 5px;
+            background-color: #0B0C10;  
+            border-radius: 50%;
+            box-shadow:
+            0 0 40px 40px rgba(0, 194, 203, 0.2),
+            0 0 80px 80px rgba(0, 194, 203, 0.15),
+            0 0 120px 120px rgba(0, 194, 203, 0.1);
+            opacity: 0.8;
+            position: absolute;
+            top: -2.5px;
+            left: 50%;
+            transition: translate 1s ease;
+        }
+        
+        .active1 {
+            translate: -140px 20px;
+        }
+        
+        .active2 {
+            translate: -40px 20px;
+        }
+        
+        .active3 {
+            translate: 67px 20px;
+        }
+        
+        .active4 {
+            translate: 155px 20px;
+        }
+    </style>
+</head>
+<body class="bd1">
+    <div class="hdr">
+        <a href="../../index.html"><img src="../../assets/images/Logo_Beleza.png" alt="Logo"></a>
+        <div class="a">
+            <a class="hdr-a1 hdr-a" href="../pages/panel.html">Inicio</a>
+            <a class="hdr-a2 hdr-a" href="../pages/habitaciones.html">Habitaciones</a>
+            <a class="hdr-a3 hdr-a" href="../pages/pedidos.html">Pedidos</a>
+            <a class="hdr-a4 hdr-a" href="../pages/usuarios.html">Usuarios</a>
+        </div>
+        <div></div>
+    </div>
+    <div class="bg-light"></div>
+</body>
+</html>

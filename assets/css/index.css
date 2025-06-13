@@ -155,7 +155,7 @@ body, html{
 
 .so-text p{
     font-size: var(--p-main-font);
-    text-align: justify;
+    text-align: left;
     align-self: flex-start;
     margin-left: 15px;
     color: rgb(255, 255, 255);
@@ -185,7 +185,7 @@ body, html{
 
 .section-two{
     width: calc(100% - (var(--page-margin)*2));
-    height: 60vh;
+    height: fit-content;
     margin-left: var(--page-margin);
     margin-right: var(--page-margin);
     display: flex;
@@ -197,7 +197,8 @@ body, html{
 }
 
 .card{
-    width: 20%;
+    width: 25%;
+    height: fit-content;
     box-shadow: 0 0 25px rgba(0,0,0,0.25);
     border-radius: 25px;
     display: flex;
@@ -206,7 +207,7 @@ body, html{
 
 .card-title{
     width: 100%;
-    height: 30%;
+    height: 150px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
