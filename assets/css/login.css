@@ -1,10 +1,9 @@
 html, body {
     margin: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     min-width: 600px;
     min-height: 400px;
-    
 }     
 
 h2 {
@@ -33,7 +32,7 @@ h3 {
     z-index: -1;
     position: absolute;
     overflow: hidden;
-    background: linear-gradient(45deg,  #dd1515 10%, #e15617 35%, #e15617 65%, #EB8915 90%);
+    background: linear-gradient(45deg,  #c93b03 10%, #e15617 35%, #e15617 65%, #EB8915 90%);
 }
 
 .container {
@@ -138,6 +137,13 @@ h3 {
     transition: opacity 1s ease;
 }
 
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
 .active {
     opacity: 100%;
     z-index: 4;
@@ -150,9 +156,10 @@ h3 {
 
 a {
     color: #ff3131;
+    text-decoration: underline 4px rgb(247, 247, 247);
+    transition: text-decoration 0.5s ease;
 }
 
 a:hover {
-    text-decoration-line: underline;
-    text-decoration-thickness: 4px;
+    text-decoration: underline 4px #ff3131;
 }

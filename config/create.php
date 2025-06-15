@@ -7,7 +7,7 @@
     </head>
     <body>
         
-        <a href="../admin/panel.html">Volver a Inicio</a>
+        <a href="../admin/pages/panel.html">Volver a Inicio</a>
         <?php
             
             $host = "localhost";

@@ -27,46 +27,25 @@
                 <h3>Quienes somos</h3>
                 <hr>
                 <p>Desde 1995, Hotel Beleza es un rincón de paz donde el confort se funde con la naturaleza. Vive la esencia del mar en cada detalle y redescubre el descanso frente a la costa.</p>
-                <input type="button" value="">
             </div>
             <div class="card card-2">
                 <div class="card-title ct-2"></div>
                 <h3>Servicios</h3>
                 <hr>
                 <p>Relájate en nuestro exclusivo spa, nada con vista al horizonte en nuestra piscina frente al mar y deléitate con la cocina gourmet. Con WiFi, traslados al aeropuerto y atención personalizada, tu experiencia será inolvidable.</p>
-                <input type="button" value="">
+                <input type="button" value="Ver mas ⮕" class="butones" onclick="location.href='/Hotel-Beleza-Website/pages/restaurant.html'">
             </div>
             <div class="card card-3">
                 <div class="card-title ct-3"></div>
                 <h3>Habitaciones</h3>
                 <hr>
                 <p>Habitaciones elegantes con vista al océano, balcón privado y todos los lujos: aire acondicionado, minibar, TV y WiFi gratuito. Cada rincón está diseñado para tu descanso y confort.</p>
-                <input type="button" value="">
+                <input type="button" value="Ver mas ⮕" class="butones" onclick="location.href='/Hotel-Beleza-Website/pages/booking.html'">
             </div>
         </div>
         <div class="section-three section">
-            
+            <!--Productos-->
         </div>
-
-    
-        <!--
-            <div class="section- section">
-                <ul>
-                    <li>
-                        <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image Slider 1">
-                    </li>
-                    <li>
-                        <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWx8ZW58MHx8MHx8fDA%3D" alt="Image Slider 2">
-                    </li>
-                    <li>
-                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGhvdGVsfGVufDB8fDB8fHww" alt="Image Slider 3">
-                    </li>
-                    <li>
-                        <img src="https://plus.unsplash.com/premium_photo-1687960116497-0dc41e1808a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGhvdGVsfGVufDB8fDB8fHww" alt="Image Slider 4">
-                    </li>
-                </ul>
-            </div>
-        -->
 
     <script>
         fetch('/Hotel-Beleza-Website/templates/header.html')
@@ -74,7 +53,7 @@
             .then(data => {
         document.getElementById('header').innerHTML = data;
     });
-        fetch('templates/footer.html')
+        fetch('/Hotel-Beleza-Website/templates/footer.html')
             .then(res => res.text())
             .then(data => {
         document.getElementById('footer').innerHTML = data;

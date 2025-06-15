@@ -85,6 +85,17 @@
             0 20px 6px rgba(0, 0, 0, 0.7);
         }
         
+        .hdr-a5 {
+            transition: font-weight 0.5s ease, text-shadow 1s ease 0.3s;
+        }
+        
+        .hdr-a5:hover {
+            font-weight: bold;
+            text-shadow: 
+            0 0 25px rgba(200, 200, 200, 1),
+            0 20px 6px rgba(0, 0, 0, 0.7);
+        }
+        
         .bg-light {
             width: 5px;
             height: 5px;
@@ -102,19 +113,23 @@
         }
         
         .active1 {
-            translate: -140px 20px;
+            translate: -175px 22.5px;
         }
         
         .active2 {
-            translate: -40px 20px;
+            translate: -75px 22.5px;
         }
         
         .active3 {
-            translate: 67px 20px;
+            translate: 37px 22.5px;
         }
         
         .active4 {
-            translate: 155px 20px;
+            translate: 125px 22.5px;
+        }
+        
+        .active5 {
+            translate: 490px 22.5px;
         }
     </style>
 </head>
@@ -123,11 +138,11 @@
         <a href="../../index.html"><img src="../../assets/images/Logo_Beleza.png" alt="Logo"></a>
         <div class="a">
             <a class="hdr-a1 hdr-a" href="../pages/panel.html">Inicio</a>
-            <a class="hdr-a2 hdr-a" href="../pages/habitaciones.html">Habitaciones</a>
-            <a class="hdr-a3 hdr-a" href="../pages/pedidos.html">Pedidos</a>
-            <a class="hdr-a4 hdr-a" href="../pages/usuarios.html">Usuarios</a>
+            <a class="hdr-a2 hdr-a" href="../pages/habitaciones.php">Habitaciones</a>
+            <a class="hdr-a3 hdr-a" href="../pages/pedidos.php">Pedidos</a>
+            <a class="hdr-a4 hdr-a" href="../pages/usuarios.php">Usuarios</a>
         </div>
-        <div></div>
+        <div><a class="hdr-a5 hdr-a" href="../../config/create.php">Crear DB</a></div>
     </div>
     <div class="bg-light"></div>
 </body>

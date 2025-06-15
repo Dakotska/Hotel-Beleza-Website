@@ -48,8 +48,8 @@
                 </form>
             </div>
             <div class="images login">
-                <div class="img-login img active"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/92/0c/35/view-from-our-unit.jpg?w=1200&h=-1&s=1" alt=""></div>
-                <div class="img-register img no-active"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/92/0c/35/view-from-our-unit.jpg?w=1200&h=-1&s=1"></div>
+                <div class="img-login img active"><img src="../assets/images/img-login.png" alt=""></div>
+                <div class="img-register img no-active"><img src="../assets/images/img-register.png"></div>
             </div>
         </div>
     </div>

@@ -157,7 +157,7 @@
                 <img src="../../assets/images/main-bg.webp" alt="IMG">
                 <div>
                     <span class="w-span">Habitaciones</span>
-                    <a  href="" class="btn-a btn1">Entrar</a>
+                    <a href="habitaciones.php" class="btn-a btn1">Entrar</a>
                 </div>
             </div>
         </div>
@@ -166,14 +166,14 @@
                 <img src="../../assets/images/main-bg.webp" alt="">
                 <div>
                     <span class="h-span">Pedidos</span>
-                    <a href="" class="btn-a btn2">Entrar</a>
+                    <a href="pedidos.php" class="btn-a btn2">Entrar</a>
                 </div>
             </div>
             <div class="h-container h-2">
-                <img src="../../assets/images/main-bg.webp" alt="">
+                <img src="../../assets/images/main-bg.webp">
                 <div>
                     <span class="h-span">Usuarios</span>
-                    <a href="" class="btn-a btn3">Entrar</a>
+                    <a href="usuarios.php" class="btn-a btn3">Entrar</a>
                 </div>
             </div>
         </div>
@@ -189,6 +189,7 @@
             const a2 = document.querySelector(".hdr-a2");
             const a3 = document.querySelector(".hdr-a3");
             const a4 = document.querySelector(".hdr-a4");
+            const a5 = document.querySelector(".hdr-a5");
             const light = document.querySelector(".bg-light");
             
             a1.addEventListener("mouseenter", () => {
@@ -217,6 +218,13 @@
             });
             a4.addEventListener("mouseleave", () => {
                 light.classList.remove("active4")
+            });
+            
+            a5.addEventListener("mouseenter", () => {
+                light.classList.add("active5")
+            });
+            a5.addEventListener("mouseleave", () => {
+                light.classList.remove("active5")
             });
         });
         
