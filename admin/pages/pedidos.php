@@ -378,7 +378,7 @@
                                     <td><h3>{$row['cantidad']}</h3></td>
                                     <td><h3>\${$row['costo']}</h3></td>
                                     <td><div class='editar'><a href='../../config/a-ed-el-pedidos.php?id={$row['ID']}&type=ed'><img src='../../assets/images/img-edit.png' alt='Editar'></a></div></td>
-                                    <td><div class='eliminar'><a href='../../config/a-ed-el-pedidos.php?id={$row['ID']}&type=el' onclick=\"return confirm('¿Estás seguro de que deseas eliminar esta habitación?');\"><img src='../../assets/images/img-delete.png' alt='Eliminar'></a></div></td>
+                                    <td><div class='eliminar'><a href='../../config/a-ed-el-pedidos.php?id={$row['ID']}&type=el' onclick=\"return confirm('¿Estás seguro de que deseas eliminar este pedido?');\"><img src='../../assets/images/img-delete.png' alt='Eliminar'></a></div></td>
                                   </tr>";
                         }
                     } else {

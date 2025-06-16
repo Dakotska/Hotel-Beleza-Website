@@ -327,11 +327,11 @@
                                     <td><h4>{$row['email']}</h4></td>
                                     <td><h4 class='div'><span class='contrasena'>{$row['contrasena']}</span><img class='cont' src='../../assets/images/cont-si.png' alt='Mostrar'></h4></td>
                                     <td><div class='editar'><a href='../../config/a-ed-el-usuarios.php?id={$row['ID']}&type=ed'><img src='../../assets/images/img-edit.png' alt='Editar'></a></div></td>
-                                    <td><div class='eliminar'><a href='../../config/a-ed-el-usuarios.php?id={$row['ID']}&type=el' onclick=\"return confirm('¿Estás seguro de que deseas eliminar esta habitación?');\"><img src='../../assets/images/img-delete.png' alt='Eliminar'></a></div></td>
+                                    <td><div class='eliminar'><a href='../../config/a-ed-el-usuarios.php?id={$row['ID']}&type=el' onclick=\"return confirm('¿Estás seguro de que deseas eliminar este usuario?');\"><img src='../../assets/images/img-delete.png' alt='Eliminar'></a></div></td>
                                   </tr>";
                         }
                     } else {
-                        echo "<tr><td colspan='8'>No hay habitaciones registradas.</td></tr>";
+                        echo "<tr><td colspan='8'>No hay usuarios registrados.</td></tr>";
                     }
                     
                     ?>
