@@ -51,7 +51,6 @@
 
                             $result = mysqli_query($con, $sql);
                             if($result) {
-
                                 echo "<br><h3>Base de Datos y Tablas creadas correctamente</h3>";
 
                             } else {

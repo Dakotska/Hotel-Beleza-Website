@@ -257,7 +257,7 @@
         if ($id == 0) {
             $sql = "SELECT * FROM habitaciones ORDER BY ID DESC LIMIT 1;";
             $result = mysqli_query($con, $sql);
-            if ($result) {
+            if (mysqli_num_rows($result) > 0) {
                 $row = mysqli_fetch_assoc($result);
                 $id = $row["ID"] + 1;
             } else {
