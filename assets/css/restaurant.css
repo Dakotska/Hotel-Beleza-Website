@@ -1,0 +1,288 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.section-one {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    background-image: url("../images/principal-com.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(1px);
+}
+
+.one-container {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(255, 86, 23, 0.5);
+    border-radius: 32px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    padding: 20px 50px;
+}
+
+.sec-desayunos, .sec-comidas, .sec-cenas {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    font-weight: 400;
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+    box-shadow: 0 10px 20px -10px rgb(65, 65, 65);
+}
+
+.card-down {
+    padding: 20px;
+    padding-bottom: 60px;
+}
+
+.card-down h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-down p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.card-down ul {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.card input[type="button"] {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #ff814d;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-family: 'Material Icons';
+    font-size: 24px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+.card input[type="button"]:hover {
+    background-color: #cc4717;
+}
+
+.card input[type="button"]:active {
+    transform: scale(0.9);
+}
+
+.sec-recibo{
+    width: 100%;
+    height: fit-content;
+    min-height: 200px;
+    padding: 0;
+    margin: 0;
+}
+
+.rec-header{
+    width: 100%;
+    height: 100px;
+    background-color: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.rec-header h1{
+    color: lightgray;
+    font-size: 50px;
+    font-weight: 200;
+    margin: 0;
+}
+
+.rec-body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding: 10px;
+    gap: 10px;
+}
+
+.Lista-de-comidas {
+    width: 70%;
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.Barra-derecha {
+    width: 30%;
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+#tabla-productos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#tabla-productos thead {
+    background-color: #f8f8f8;
+}
+
+#tabla-productos thead th {
+    padding: 16px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+#tabla-productos tbody td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+#tabla-productos img {
+    width: 96px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.cantidad-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.cantidad-wrapper input[type="number"] {
+    width: 50px;
+    text-align: center;
+    padding: 4px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fdfdfd;
+}
+
+.cantidad-wrapper button {
+    background-color: #d3d3d3;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cantidad-wrapper button:hover {
+    background-color: #bcbcbc;
+}
+
+.producto-preciou input,
+.producto-precio input {
+    border: none;
+    background: transparent;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    width: 80px;
+}
+
+.producto-accion button {
+    background-color: #ff4d4d;
+    border: none;
+    padding: 6px 10px;
+    font-size: 16px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.producto-accion button:hover {
+    background-color: #cc0000;
+}
+
+/* Resaltado al agregar producto */
+.resaltado {
+    outline: 2px solid #008cff;
+    animation: parpadeo 1s ease-in-out;
+}
+
+@keyframes parpadeo {
+    0% { outline-color: #008cff; }
+    50% { outline-color: transparent; }
+    100% { outline-color: #008cff; }
+}

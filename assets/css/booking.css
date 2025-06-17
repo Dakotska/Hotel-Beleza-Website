@@ -19,15 +19,14 @@ body, html {
     -moz-box-sizing: border-box;
 }
 
-
-
 .section-one {
     width: 100%;
-    height: 85vh;
+    height: 90vh;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 80px;
 }
 
 .bg-img {
@@ -35,7 +34,11 @@ body, html {
     height: 100%;
     z-index: 0;
     position: absolute;
-    background-image: url("../images/main-bg.webp");
+    background-image: url("../images/principal-hab.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(2px);
 }
 
 .one-container {
@@ -54,4 +57,214 @@ body, html {
     color: white;
     font-size: 60px;
     padding: 20px 50px;
+}
+
+.w-container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.standard-section {
+    width: 90%;
+    height: 650px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.deluxe-section {
+    width: 90%;
+    height: 650px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.suite-section {
+    width: 90%;
+    height: 650px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-top {
+    width: 100%;
+    height: 5%;
+    min-height: 40px;
+    display: flex;
+}
+
+.track {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.track::-webkit-scrollbar {
+    display: none;
+}
+
+.section-title {
+    margin-left: 25px;
+    font-size: 30px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+.section-btns {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 10px;
+    margin-right: 25px;
+}
+
+.section-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn-img {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
+
+.card {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    flex-shrink: 0;
+    background-color: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    font-weight: 400;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: transform 0.3s ease, height 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+img.card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+    box-shadow: 0 10px 20px -10px rgb(65, 65, 65);
+}
+
+.card-down {
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+.card-down h1 {
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.cap-imgs {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-left: 5px;
+}
+
+img.img-cap {
+    height: 20px;
+    width: 7.80px;
+}
+
+.text {
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+img.img-disp {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.div-res {
+    display: none;
+    width: 100%;
+    height: 40px;
+    position: relative;
+    margin: 10px 0;
+    transition: display 0.3s ease;
+}
+
+.btn-reservar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #ff5617;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-reservar:hover {
+    background-color: #e65319;
+    transform: scale(1.05);
+}
+
+.btn-v {
+    width: 100%;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    justify-self: flex-end;
+    font-size: 18px;
+}
+
+img.toggle-reserva {
+    width: 30px;
+    height: 30px;
+    transition: rotate 0.3s ease;
+}
+
+img.opened {
+    rotate: z 90deg;
+}
+
+img.closed {
+    rotate: z -90deg;
 }

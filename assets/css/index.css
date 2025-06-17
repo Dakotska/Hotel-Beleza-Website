@@ -218,13 +218,13 @@ body, html{
 }
 
 .ct-1{
-    background-image: url('https://imgs.search.brave.com/z3LKwBmGv0Xms14DaZdVnOy8PKfVJac-BJD1DH0dcWc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWM0LmRlcG9zaXRw/aG90b3MuY29tLzEw/MTIwOTcvMzUwL2kv/NjAwL2RlcG9zaXRw/aG90b3NfMzUwNDEx/OS1zdG9jay1waG90/by1ob3RlbC1zaWdu/LmpwZw');
+    background-image: url('../images/cuadro1-img.png');
 }
 .ct-2{
-    background-image: url('https://imgs.search.brave.com/IxHxjbke_XJK-x7g99pIsuErlnxPoy-T55PQZBOmz6s/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9zdC5k/ZXBvc2l0cGhvdG9z/LmNvbS8yMjQ5MDkx/LzM0MDEvaS82MDAv/ZGVwb3NpdHBob3Rv/c18zNDAxMTQ2Ny1z/dG9jay1waG90by13/b29kbGFuZC1ob3Rl/bC1vdXRzaWRlLmpw/Zw');
+    background-image: url('../images/cuadro2-img.png');
 }
 .ct-3{
-    background-image: url('https://imgs.search.brave.com/BItOmhhgkfrwqWKC_5riDkUKwMnOHytRHQVSI0Q0kjk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWM0LmRlcG9zaXRw/aG90b3MuY29tLzEw/MDIwMjIvMjg2L2kv/NjAwL2RlcG9zaXRw/aG90b3NfMjg2NjM1/OS1zdG9jay1waG90/by1ob3RlbC1zd2lt/bWluZy1wb29sLmpw/Zw');
+    background-image: url('../images/imgs-hab/suite-cap2.png');
 }
 
 .card h3{
@@ -282,6 +282,9 @@ body, html{
     max-width: 900px;
     min-width: 700px;
     margin: 50px auto;
+    box-shadow: 0 15px 10px rgb(65, 65, 65);
+    border-radius: 25px;
+    border: none;
 }
 
 .carousel {
