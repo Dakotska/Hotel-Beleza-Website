@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="../../assets/images/Logo_Beleza.png">
-    <title>Usuarios</title>
+    <title>Beleza Admin | Usuarios</title>
     <style>
         body {
             margin: 0;

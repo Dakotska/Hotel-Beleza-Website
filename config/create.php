@@ -8,9 +8,7 @@
     </head>
     <body>
         
-        <a href="../admin/pages/panel.html">Volver a Inicio</a>
         <?php
-            
             $host = "localhost";
             $usuario = "root";
             $pass = "";
@@ -52,26 +50,38 @@
 
                             $result = mysqli_query($con, $sql);
                             if($result) {
-                                echo "<br><h3>Base de Datos y Tablas creadas correctamente</h3>";
+                                echo "<script>alert('Base de Datos y Tablas creadas');
+                                window.location.href = '../admin/pages/panel.html';
+                                </script>";
 
                             } else {
-                                echo "Error al crear la tabla P_Comida: " . mysqli_connect_error();
+                                echo "<script>alert('Error al crear la tabla Pedidos');
+                                window.location.href = '../admin/pages/panel.html';
+                                </script>";
                             }
 
                         } else {
-                            echo "Error al crear la tabla Habitaciones: " . mysqli_connect_error();
+                            echo "<script>alert('Error al crear la tabla Habitaciones');
+                                window.location.href = '../admin/pages/panel.html';
+                                </script>";
                         }
 
                     } else {
-                        echo "Error al crear la tabla Usuarios: " . mysqli_connect_error();
+                        echo "<script>alert('Error al crear la tabla Usuarios');
+                                window.location.href = '../admin/pages/panel.html';
+                                </script>";
                     }
             
                 } else {
-                    echo "Error al crear la base de datos: " . mysqli_connect_error();
+                    echo "<script>alert('Error al crear la Base de Datos');
+                            window.location.href = '../admin/pages/panel.html';
+                            </script>";
                 } 
 
             } else {
-                echo "Error al entrar al host local: " . mysqli_connect_error();
+                echo "<script>alert('Error al conectar al servidor local');
+                        window.location.href = '../admin/pages/panel.html';
+                        </script>";
             }
 
         ?>

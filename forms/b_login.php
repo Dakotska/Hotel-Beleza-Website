@@ -25,7 +25,7 @@
             header("Location: ../admin/pages/panel.html");
             exit;
         } else if ($loginState) {
-            header("Location: ../index.html");
+            header("Location: ../index.php");
             exit;
         } else {
             header("Location: ../pages/login.php?error=1");

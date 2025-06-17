@@ -8,13 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="../assets/images/Logo_Beleza.png">
     <link rel="stylesheet" href="../assets/css/booking.css">
-    <title>Booking</title>
+    <title>Beleza | Booking</title>
 </head>
 <body>
     <header id="header"></header>
 
     <div class="section-one">
-        <div class="bg-img"></div>
+        <div class="bg-img"><video src="../assets/images/principal-hab.mp4" autoplay muted loop playsinline></video></div>
         <div class="one-container">
             <h1 class="title">Habitaciones</h1>
         </div>

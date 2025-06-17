@@ -29,7 +29,7 @@
                     $idtable = mysqli_fetch_assoc($result)["ID"];
                     if ($idtable != $id) {
                         echo "<script>alert('Ya existe una habitación con el número de habitación $n_habitacion'); window.location.href='../admin/pages/habitaciones.php';</script>";
-                    exit();
+                        exit();
                     }
             }
         if ($_GET["action"] == "edit") {
@@ -308,7 +308,7 @@
             </select>
             
             <label for="n_habitacion">Número de Habitación:</label>
-            <input type="number" name="n_habitacion" id="n_habitacion" maxlength="3" value="<?php echo isset($n_habitacion) ? $n_habitacion : ''; ?>" required>
+            <input type="number" name="n_habitacion" id="n_habitacion" maxlength="3" value="<?php echo isset($n_habitacion) ? $n_habitacion : ''; ?>" required placeholder="Ej: 999">
 
             <label for="disponibilidad">Disponibilidad:</label>
             <select name="disponibilidad" class="select-disp" id="disponibilidad" required>
@@ -317,7 +317,7 @@
             </select>
             
             <label for="precio">Precio por Noche:</label>
-            <input type="text" name="precio" id="precio" value="<?php echo isset($precio) ? $precio : ''; ?>" required>
+            <input type="text" name="precio" id="precio" value="<?php echo isset($precio) ? $precio : ''; ?>" required placeholder="Ej: 999999.99">
             
             <div class="btns">
             <button type="submit"><?php echo $type; ?> Habitación</button>

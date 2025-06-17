@@ -286,19 +286,19 @@
             <input type="text" readonly name="id" value="<?php echo $id; ?>">
 
             <label for="n_pedido">Número de Pedido:</label>
-            <input type="number" name="n_pedido" id="n_pedido" value="<?php echo isset($n_pedido) ? $n_pedido : ''; ?>" required>
+            <input type="number" name="n_pedido" id="n_pedido" placeholder="Ej: 9999" value="<?php echo isset($n_pedido) ? $n_pedido : ''; ?>" required>
             
             <label for="n_habitacion">Número de Habitación:</label>
-            <input type="number" name="n_habitacion" id="n_habitacion" maxlength="3" value="<?php echo isset($n_habitacion) ? $n_habitacion : ''; ?>" required>
+            <input type="number" placeholder="Ej: 999" name="n_habitacion" id="n_habitacion" maxlength="3" value="<?php echo isset($n_habitacion) ? $n_habitacion : ''; ?>" required>
 
             <label for="producto">Producto:</label>
-            <input type="text" name="producto" id="producto" value="<?php echo isset($producto) ? $producto : ''; ?>" required>
+            <input type="text" placeholder="Ej: Tacos al Pastor" name="producto" id="producto" value="<?php echo isset($producto) ? $producto : ''; ?>" required>
 
             <label for="cantidad">Cantidad:</label>
-            <input type="number" name="cantidad" id="cantidad" value="<?php echo isset($cantidad) ? $cantidad : ''; ?>" required>
+            <input type="number" placeholder="Ej: 99" name="cantidad" id="cantidad" value="<?php echo isset($cantidad) ? $cantidad : ''; ?>" required>
 
             <label for="costo">Costo:</label>
-            <input type="text" name="costo" id="costo" value="<?php echo isset($costo) ? $costo : ''; ?>" required>
+            <input type="text" placeholder="Ej: 99999.99" name="costo" id="costo" value="<?php echo isset($costo) ? $costo : ''; ?>" required>
             
             <div class="btns">
             <button type="submit"><?php echo $type; ?> Pedido</button>

@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Hotel Beleza</title>
+    <title>Beleza | Login</title>
     <link rel="icon" href="../assets/images/Logo_Beleza.png">
     <link rel="stylesheet" href="../assets/css/login.css">
     <script type="text/javascript" src="../assets/js/login.js"></script>

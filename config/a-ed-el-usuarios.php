@@ -293,16 +293,16 @@
             <input type="text" readonly name="id" value="<?php echo $id; ?>">
 
             <label for="n_usuario">Nombre de Usuario:</label>
-            <input type="text" name="n_usuario" id="n_usuario" value="<?php echo isset($n_usuario) ? $n_usuario : ''; ?>" required>
+            <input type="text" placeholder="Ej: Usuario Beleza" name="n_usuario" id="n_usuario" value="<?php echo isset($n_usuario) ? $n_usuario : ''; ?>" required>
             
             <label for="n_completo">Nombre Completo:</label>
-            <input type="text" name="n_completo" id="n_completo" value="<?php echo isset($n_completo) ? $n_completo : ''; ?>" required>
+            <input type="text" placeholder="Ej: Nombre Completo Usuario Beleza" name="n_completo" id="n_completo" value="<?php echo isset($n_completo) ? $n_completo : ''; ?>" required>
 
             <label for="email">Correo:</label>
-            <input type="text" name="email" id="email" value="<?php echo isset($email) ? $email : ''; ?>" required>
+            <input type="text" placeholder="usuariobeleza@gmail.com" name="email" id="email" value="<?php echo isset($email) ? $email : ''; ?>" required>
 
             <label for="contrasena">Contraseña:</label>
-            <input type="text" name="contrasena" id="contrasena" value="<?php echo isset($contrasena) ? $contrasena : ''; ?>" required>
+            <input type="text" placeholder="Ej: CoNtRaSeÑaBeLeZa1?/32" name="contrasena" id="contrasena" value="<?php echo isset($contrasena) ? $contrasena : ''; ?>" required>
             
             <div class="btns">
             <button type="submit"><?php echo $type; ?> Usuario</button>

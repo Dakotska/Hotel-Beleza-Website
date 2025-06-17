@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="../../assets/images/Logo_Beleza.png">
-    <title>Habitaciones</title>
+    <title>Beleza Admin | Habitaciones</title>
     <style>
         body {
             margin: 0;
@@ -373,7 +373,7 @@
                                     <td><h3>\${$row['precio']}</h3></td>
                                     <td><div class='editar'><a href='../../config/a-ed-el-habitaciones.php?id={$row['ID']}&type=ed'><img src='../../assets/images/img-edit.png' alt='Editar'></a></div></td>
                                     <td><div class='eliminar'><a href='../../config/a-ed-el-habitaciones.php?id={$row['ID']}&type=el' onclick=\"return confirm('¿Estás seguro de que deseas eliminar esta habitación?');\"><img src='../../assets/images/img-delete.png' alt='Eliminar'></a></div></td>
-                                  </tr>";
+                                </tr>";
                         }
                     } else {
                         echo "<tr><td colspan='8'>No hay habitaciones registradas.</td></tr>";
