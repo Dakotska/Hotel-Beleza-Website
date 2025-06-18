@@ -265,7 +265,6 @@
                 function getCellValue(row, idx) {
                     let cell = row.children[idx];
                     if (idx === 0 || idx === 4 || idx === 5) {
-                        // ID, Cantidad, Costo
                         let val = cell.textContent.replace('$','').replace(',','.').trim();
                         return parseFloat(val) || 0;
                     }
@@ -277,7 +276,6 @@
                     const order = document.getElementById('order').value;
                     if (!sortBy) return;
 
-                    // Map: id=0, cantidad=4, costo=5
                     const colMap = {
                         'id': 0,
                         'cantidad': 4,
@@ -312,7 +310,6 @@
                     const tbody = document.querySelector('table tbody');
                     const rows = Array.from(tbody.querySelectorAll('tr')).filter(r => r.querySelector('td'));
 
-                    // Map: n_pedido=1, n_habitacion=2, producto=3
                     const fieldMap = {
                         'n_pedido': 1,
                         'n_habitacion': 2,
@@ -395,26 +392,26 @@
         </div>
     </div>
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const pedidoCells = document.querySelectorAll('tbody tr td:nth-child(2) h3');
-        const rows = Array.from(document.querySelectorAll('tbody tr'));
-        const pedidoCostos = {};
-        rows.forEach(row => {
-            const nPedido = row.children[1]?.textContent.trim();
-            const costoStr = row.children[5]?.textContent.replace('$','').replace(',','.').trim();
-            const costo = parseFloat(costoStr) || 0;
-            if (nPedido) {
-                if (!pedidoCostos[nPedido]) pedidoCostos[nPedido] = 0;
-                pedidoCostos[nPedido] += costo;
-            }
+        document.addEventListener('DOMContentLoaded', function() {
+            const pedidoCells = document.querySelectorAll('tbody tr td:nth-child(2) h3');
+            const rows = Array.from(document.querySelectorAll('tbody tr'));
+            const pedidoCostos = {};
+            rows.forEach(row => {
+                const nPedido = row.children[1]?.textContent.trim();
+                const costoStr = row.children[5]?.textContent.replace('$','').replace(',','.').trim();
+                const costo = parseFloat(costoStr) || 0;
+                if (nPedido) {
+                    if (!pedidoCostos[nPedido]) pedidoCostos[nPedido] = 0;
+                    pedidoCostos[nPedido] += costo;
+                }
+            });
+            pedidoCells.forEach(cell => {
+                const nPedido = cell.textContent.trim();
+                const total = pedidoCostos[nPedido] ?? 0;
+                cell.style.cursor = 'pointer';
+                cell.setAttribute('title', `Precio total del pedido: $${total.toFixed(2)}`);
+            });
         });
-        pedidoCells.forEach(cell => {
-            const nPedido = cell.textContent.trim();
-            const total = pedidoCostos[nPedido] ?? 0;
-            cell.style.cursor = 'pointer';
-            cell.setAttribute('title', `Precio total del pedido: $${total.toFixed(2)}`);
-        });
-    });
     </script>
     <script type="text/javascript">
         fetch('../templates/header.html')

@@ -27,24 +27,24 @@
             $sql = "UPDATE p_comida SET n_pedido=$n_pedido, n_habitacion=$n_habitacion, producto='$producto', cantidad=$cantidad, costo=$costo WHERE ID=$id;";
             $result = mysqli_query($con, $sql);
             if ($result) {
-                echo "<script>alert('Pedido actualizado correctamente');</script>";
-                header ("Location: ../admin/pages/pedidos.php");
+                echo "<script>alert('Pedido actualizado correctamente');
+                window.location.href = '../admin/pages/pedidos.php';</script>";
                 exit();
             } else {
-                echo "<script>alert('Error al actualizar el pedido de ID: $id \n" . mysqli_error($con) . "');</script>";
-                header ("Location: ../admin/pages/pedidos.php");
+                echo "<script>alert('Error al actualizar el pedido de ID: $id \n" . mysqli_error($con) . "');
+                window.location.href = '../admin/pages/pedidos.php';</script>";
                 exit();
             }
         } else if ($_GET["action"] == "add") {
             $sql = "INSERT INTO pedidos (n_pedido, n_habitacion, producto, cantidad, costo) VALUES ($n_pedido, $n_habitacion, '$producto', $cantidad, $precio);";
             $result = mysqli_query($con, $sql);
             if ($result) {
-                echo "<script>alert('Pedido añadido correctamente');</script>";
-                header ("Location: ../admin/pages/pedidos.php");
+                echo "<script>alert('Pedido añadido correctamente');
+                window.location.href = '../admin/pages/pedidos.php';</script>";
                 exit();
             } else {
-                echo "<script>alert('Error al añadir el pedido \n" . mysqli_error($con) . "');</script>";
-                header ("Location: ../admin/pages/pedidos.php");
+                echo "<script>alert('Error al añadir el pedido \n" . mysqli_error($con) . "');
+                window.location.href = '../admin/pages/pedidos.php';</script>";
                 exit();
             }
         }
@@ -235,12 +235,12 @@
         $sql = "DELETE FROM p_comida WHERE ID=$id;";
         $result = mysqli_query($con, $sql);
         if ($result) {
-            echo "<script>alert('Pedido eliminado correctamente');</script>";
-            header ("Location: ../admin/pages/pedidos.php");
+            echo "<script>alert('Pedido eliminado correctamente');
+            window.location.href = '../admin/pages/pedidos.php';</script>";
             exit();
         } else {
-            echo "<script>alert('Error al eliminar el pedido de ID: $id \n" . mysqli_error($con) . "');</script>";
-            header ("Location: ../admin/pages/pedidos.php");
+            echo "<script>alert('Error al eliminar el pedido de ID: $id \n" . mysqli_error($con) . "');
+            window.location.href = '../admin/pages/pedidos.php';</script>";
             exit();
         }
     }
@@ -267,8 +267,8 @@
                 $cantidad = $row["cantidad"];
                 $costo = $row["costo"];
             } else {
-                echo "<script>alert('Error al obtener los datos de el pedido de ID: $id \n" . mysqli_error($con) . "');</script>";
-                header ("Location: ../admin/pages/pedidos.php");
+                echo "<script>alert('Error al obtener los datos de el pedido de ID: $id \n" . mysqli_error($con) . "');
+                window.location.href = '../admin/pages/pedidos.php';</script>";
                 exit();
             }
         }

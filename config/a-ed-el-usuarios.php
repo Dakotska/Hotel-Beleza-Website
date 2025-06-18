@@ -27,32 +27,34 @@
             if (mysqli_num_rows($result) > 0) {
                     $idtable = mysqli_fetch_assoc($result)["ID"];
                     if ($idtable != $id) {
-                        echo "<script>alert('Ya existe un usuario con el nombre de usuario: $n_habitacion'); window.location.href='../admin/pages/usuarios.php';</script>";
-                    exit();
+                        echo "<script>alert('Ya existe un usuario con el nombre de usuario: $n_habitacion'); 
+                        window.location.href='../admin/pages/usuarios.php';</script>";
+                        exit();
                     }
             }
         if ($_GET["action"] == "edit") {
             $sql = "UPDATE usuarios SET n_usuario='$n_usuario', n_completo='$n_completo', email='$email', contrasena='$contrasena' WHERE ID=$id;";
             $result = mysqli_query($con, $sql);
             if ($result) {
-                echo "<script>alert('Usuario actualizado correctamente');</script>";
-                header ("Location: ../admin/pages/usuarios.php");
+                echo "<script>alert('Usuario actualizado correctamente');
+                window.location.href = '../admin/pages/usuarios.php';
+                </script>";
                 exit();
             } else {
-                echo "<script>alert('Error al actualizar el usuario de ID: $id \n" . mysqli_error($con) . "');</script>";
-                header ("Location: ../admin/pages/usuario.php");
+                echo "<script>alert('Error al actualizar el usuario de ID: $id \n" . mysqli_error($con) . "');
+                window.location.href = '../admin/pages/usuarios.php';</script>";
                 exit();
             }
         } else if ($_GET["action"] == "add") {
             $sql = "INSERT INTO usuarios (n_usuario, n_completo, email, contrasena) VALUES ('$n_usuario', '$n_completo', '$email', '$contrasena');";
             $result = mysqli_query($con, $sql);
             if ($result) {
-                echo "<script>alert('Usuario añadido correctamente');</script>";
-                header ("Location: ../admin/pages/usuarios.php");
+                echo "<script>alert('Usuario añadido correctamente');
+                window.location.href = '../admin/pages/usuarios.php';</script>";
                 exit();
             } else {
-                echo "<script>alert('Error al añadir el usuario \n" . mysqli_error($con) . "');</script>";
-                header ("Location: ../admin/pages/usuario.php");
+                echo "<script>alert('Error al añadir el usuario \n" . mysqli_error($con) . "');
+                window.location.href = '../admin/pages/usuarios.php';</script>";
                 exit();
             }
         }
@@ -243,12 +245,12 @@
         $sql = "DELETE FROM usuarios WHERE ID=$id;";
         $result = mysqli_query($con, $sql);
         if ($result) {
-            echo "<script>alert('Usuario eliminado correctamente');</script>";
-            header ("Location: ../admin/pages/usuarios.php");
+            echo "<script>alert('Usuario eliminado correctamente');
+            window.location.href = '../admin/pages/usuarios.php';</script>";
             exit();
         } else {
-            echo "<script>alert('Error al eliminar el usuario de ID: $id \n" . mysqli_error($con) . "');</script>";
-            header ("Location: ../admin/pages/usuarios.php");
+            echo "<script>alert('Error al eliminar el usuario de ID: $id \n" . mysqli_error($con) . "');
+            window.location.href = '../admin/pages/usuarios.php';</script>";
             exit();
         }
     }
@@ -274,8 +276,8 @@
                 $email = $row["email"];
                 $contrasena = $row["contrasena"];
             } else {
-                echo "<script>alert('Error al obtener los datos de el usuario de ID: $id \n" . mysqli_error($con) . "');</script>";
-                header ("Location: ../admin/pages/usuarios.php");
+                echo "<script>alert('Error al obtener los datos de el usuario de ID: $id \n" . mysqli_error($con) . "');
+                window.location.href = '../admin/pages/usuarios.php';</script>";
                 exit();
             }
         }

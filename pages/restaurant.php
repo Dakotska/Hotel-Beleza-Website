@@ -234,7 +234,7 @@
                     <ol>
                     </ol>
                 </div>
-                <h3><input type="number" name="numeroHab" id="" placeholder="Ej: 999"></h3>
+                <h3><input type="number" name="numeroHab" id="" placeholder="Ej: 999" min="1" max="999" required></h3>
                 <button type="submit" value="">Comprar ahora</button>
             </div>
         </div>
@@ -243,7 +243,6 @@
     <footer id="footer"></footer>
 
     <script>
-        // Carga header y footer
         fetch('../templates/header.html')
             .then(res => res.text())
             .then(data => {
@@ -258,7 +257,6 @@
             })
             .catch(err => console.error('Error cargando footer:', err));
 
-        // Muestra mensaje si no hay productos
         function verificarProductos() {
             const tbody = document.querySelector("#tabla-productos tbody");
             const mensaje = document.getElementById("mensaje-vacio");
@@ -266,7 +264,6 @@
         }
         document.addEventListener("DOMContentLoaded", verificarProductos);
 
-        // Conecta botones +, − y eliminar tanto en la tabla como en la lista de recibo
         function conectarBotonesCantidad(fila, rfila) {
             const btnSuma    = fila.querySelector(".btn-suma");
             const btnResta   = fila.querySelector(".btn-resta");
@@ -304,7 +301,6 @@
             }
         }
 
-        // Genera la fila de la tabla
         function generarFila(imagen, nombre, id, precio) {
             const tr = document.createElement("tr");
             tr.innerHTML = `
@@ -312,7 +308,7 @@
                     <img src="/Hotel-Beleza-Website/assets/images/images-food/${imagen}" alt="Producto ${id}">
                 </td>
                 <td class="producto-nombre t-product">
-                    <input type="text" name="nombre-id${id}" value="${nombre}"></input>
+                    <input type="text" name="nombre-id${id}" class="list-name" value="${nombre}"></input>
                 </td>
                 <td class="cantidad-wrapper t-product">
                     <button type="button" class="btn-resta">−</button>
@@ -332,7 +328,6 @@
             return tr;
         }
 
-        // Genera el ítem de recibo
         function generarRec(nombre, numero) {
             const li = document.createElement("li");
             li.classList.add(`list-rec${numero}`);
@@ -340,7 +335,6 @@
             return li;
         }
 
-        // Función principal para agregar al carrito
         function Carrito(number) {
             const tbody = document.querySelector("#tabla-productos tbody");
             const lrec  = document.querySelector("#Lista-rec ol");
@@ -395,6 +389,7 @@
                 conectarBotonesCantidad(fila, rfila);
             }
         }
+        
     </script>
 
 </body>

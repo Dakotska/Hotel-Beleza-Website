@@ -36,24 +36,24 @@
             $sql = "UPDATE habitaciones SET tipo='$tipo', capacidad='$capacidad', n_habitacion=$n_habitacion, disponibilidad=$disponibilidad, precio=$precio WHERE ID=$id;";
             $result = mysqli_query($con, $sql);
             if ($result) {
-                echo "<script>alert('Habitación actualizada correctamente');</script>";
-                header ("Location: ../admin/pages/habitaciones.php");
+                echo "<script>alert('Habitación actualizada correctamente'); 
+                window.location.href='../admin/pages/habitaciones.php';</script>";
                 exit();
             } else {
-                echo "<script>alert('Error al actualizar la habitación de ID: $id \n" . mysqli_error($con) . "');</script>";
-                header ("Location: ../admin/pages/habitaciones.php");
+                echo "<script>alert('Error al actualizar la habitación de ID: $id \n" . mysqli_error($con) . "'); 
+                window.location.href='../admin/pages/habitaciones.php';</script>";
                 exit();
             }
         } else if ($_GET["action"] == "add") {
             $sql = "INSERT INTO habitaciones (tipo, capacidad, n_habitacion, disponibilidad, precio) VALUES ('$tipo', '$capacidad', $n_habitacion, $disponibilidad, $precio);";
             $result = mysqli_query($con, $sql);
             if ($result) {
-                echo "<script>alert('Habitación añadida correctamente');</script>";
-                header ("Location: ../admin/pages/habitaciones.php");
+                echo "<script>alert('Habitación añadida correctamente'); 
+                window.location.href='../admin/pages/habitaciones.php';</script>";
                 exit();
             } else {
-                echo "<script>alert('Error al añadir la habitación \n" . mysqli_error($con) . "');</script>";
-                header ("Location: ../admin/pages/habitaciones.php");
+                echo "<script>alert('Error al añadir la habitación \n" . mysqli_error($con) . "'); 
+                window.location.href='../admin/pages/habitaciones.php';</script>";
                 exit();
             }
         }
@@ -244,12 +244,12 @@
         $sql = "DELETE FROM habitaciones WHERE ID=$id;";
         $result = mysqli_query($con, $sql);
         if ($result) {
-            echo "<script>alert('Habitación eliminada correctamente');</script>";
-            header ("Location: ../admin/pages/habitaciones.php");
+            echo "<script>alert('Habitación eliminada correctamente'); 
+            window.location.href='../admin/pages/habitaciones.php';</script>";
             exit();
         } else {
-            echo "<script>alert('Error al eliminar la habitación de ID: $id \n" . mysqli_error($con) . "');</script>";
-            header ("Location: ../admin/pages/habitaciones.php");
+            echo "<script>alert('Error al eliminar la habitación de ID: $id \n" . mysqli_error($con) . "'); 
+            window.location.href='../admin/pages/habitaciones.php';</script>";
             exit();
         }
     }
@@ -276,8 +276,8 @@
                 $disponibilidad = $row["disponibilidad"];
                 $precio = $row["precio"];
             } else {
-                echo "<script>alert('Error al obtener los datos de la habitación de ID: $id \n" . mysqli_error($con) . "');</script>";
-                header ("Location: ../admin/pages/habitaciones.php");
+                echo "<script>alert('Error al obtener los datos de la habitación de ID: $id \n" . mysqli_error($con) . "'); 
+                window.location.href='../admin/pages/habitaciones.php';</script>";
                 exit();
             }
         }
