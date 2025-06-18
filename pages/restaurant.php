@@ -17,7 +17,7 @@
     <div class="section-one">
         <div class="bg-img"><video src="../assets/images/principal-com.mp4" autoplay muted loop playsinline></video></div>
         <div class="one-container">
-            <h1 class="title">Restraurante</h1>
+            <h1 class="title">Restaurante</h1>
         </div>
     </div>
 
@@ -234,7 +234,8 @@
                     <ol>
                     </ol>
                 </div>
-                <h3><input type="number" name="numeroHab" id="" placeholder="Ej: 999" min="1" max="999" required></h3>
+                <h3>Total a pagar</h3><input type="number" name="ipoc0" id="poc0" readonly placeholder="0.00">
+                <h3>Numero de habitacion</h3><input type="number" name="numeroHab" id="" placeholder="Ej: 999" min="1" max="999" required>
                 <button type="submit" value="">Comprar ahora</button>
             </div>
         </div>
@@ -256,6 +257,15 @@
                 document.getElementById('footer').innerHTML = data;
             })
             .catch(err => console.error('Error cargando footer:', err));
+
+        function pt(){
+            const subtotales = document.querySelectorAll("input[id^='poc']:not(#poc0)");
+            let total = 0;
+            subtotales.forEach(input => {
+                total += parseFloat(input.value) || 0;
+            });
+            document.getElementById("poc0").value = total.toFixed(2);
+        }
 
         function verificarProductos() {
             const tbody = document.querySelector("#tabla-productos tbody");
@@ -292,12 +302,14 @@
                 fila.remove();
                 rfila.remove();
                 verificarProductos();
+                pt();
             });
 
             function actualizarSubtotal() {
                 const precio   = parseFloat(inputPrecioUnitario.value);
                 const cantidad = parseInt(inputCantidad.value);
                 inputSubtotal.value = (precio * cantidad).toFixed(2);
+                pt();
             }
         }
 
@@ -308,7 +320,7 @@
                     <img src="/Hotel-Beleza-Website/assets/images/images-food/${imagen}" alt="Producto ${id}">
                 </td>
                 <td class="producto-nombre t-product">
-                    <input type="text" name="nombre-id${id}" class="list-name" value="${nombre}"></input>
+                    <input type="text" name="nombre-id${id}" class="list-name" value="${nombre}" readonly></input>
                 </td>
                 <td class="cantidad-wrapper t-product">
                     <button type="button" class="btn-resta">−</button>
@@ -319,7 +331,7 @@
                     <input type="number" name="ipuoc${id}" id="puoc${id}" value="${precio}" readonly>
                 </td>
                 <td class="producto-precio t-product">
-                    <input type="number" name="ipoc${id}" id="poc${id}" value="${precio.toFixed(2)}" readonly>
+                    <input type="number" name="ipoc${id}" id="poc${id}" value="${precio.toFixed(2)}" readonly onchange="pt()">
                 </td>
                 <td class="producto-accion t-product">
                     <button type="button" class="btn-eliminar${id}">🗑️</button>
@@ -339,7 +351,6 @@
             const tbody = document.querySelector("#tabla-productos tbody");
             const lrec  = document.querySelector("#Lista-rec ol");
 
-            // Si ya existe, sólo resaltamos
             const existente = document.getElementById(`coc${number}`);
             if (existente) {
                 existente.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -348,7 +359,6 @@
                 return;
             }
 
-            // Plantillas de filas y recibos
             const plantillas = {
                 1: generarFila("desayuno1.png", "Desayuno Clásico Mexicano", 1, 120),
                 2: generarFila("desayuno2.png", "Desayuno Norteño con Salchicha", 2, 110),
@@ -387,9 +397,9 @@
                 lrec.appendChild(rfila);
                 verificarProductos();
                 conectarBotonesCantidad(fila, rfila);
+                pt();
             }
         }
-        
     </script>
 
 </body>

@@ -54,11 +54,11 @@
         </div>
     </div>
     
-    <?php if (isset($_GET["error"]) && $_GET["error"] == 1) { ?>
-        <script>alert("Usuario y/o Contraseña incorrectos");</script>
-    <?php } else if (isset($_GET["error"]) && $_GET["error"] == 2) { 
-        echo "" . mysqli_connect_error; ?>
-        <script>alert("Usuario ya existente")</script>
-    <?php } ?>
+    <?php 
+    if (isset($_GET["error"]) && $_GET["error"] == 1) {
+        echo "<script>alert('Usuario y/o Contraseña incorrectos');</script>";
+    } else if (isset($_GET["error"]) && $_GET["error"] == 2) { 
+        echo "<script>alert('Usuario ya existente')</script>"; 
+    } ?>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?php
     include("../config/db.php");
 
-    $check = FALSE;
+    $check = TRUE;
     $Reg_Nombre = (string) $_POST['r_name'];
     $Reg_Usuario = (string) $_POST['r_usu'];
     $Reg_Email = (string) $_POST['r_email'];
@@ -15,22 +15,22 @@
         $check = TRUE;
     }
     
-    if ($check) {
+    if ($check) {   
         $sql = "INSERT INTO usuarios(n_usuario, n_completo, email, contrasena)
             VALUES('$Reg_Usuario', '$Reg_Nombre', '$Reg_Email', '$Reg_Password');";
         $result = mysqli_query($con, $sql);
         if($result){
             header("Location: ../index.php?register=1");
-            exit;
+            exit();
         } else {
-            header("Location: ../pages/login.php?register=2");
-            exit;
-        }
-    } else {
-        echo "<script>
+            echo "<script>
             alert('Ocurrió un error al registrar. Por favor, intenta de nuevo.');
             window.location.href = '../pages/login.php';
-        </script>";
-        exit;
+            </script>";
+            exit();
+        }
+    } else {
+        header("Location: ../pages/login.php?error=2");
+        exit();
     }
 ?>
