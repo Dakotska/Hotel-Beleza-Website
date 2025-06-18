@@ -7,7 +7,7 @@
     $Reg_Email = (string) $_POST['r_email'];
     $Reg_Password = (string) $_POST['r_pass'];
 
-    $sql = 'SELECT n_usuario FROM usuarios WHERE n_usuario='$Reg_Usuario';';
+    $sql = "SELECT n_usuario FROM usuarios WHERE n_usuario='$Reg_Usuario';";
     $result = mysqli_query($con, $sql);
     if (mysqli_num_rows($result) > 0) {
         $check = FALSE;
@@ -15,7 +15,7 @@
         $check = TRUE;
     }
     
-    if (!$check) {
+    if ($check) {
         $sql = "INSERT INTO usuarios(n_usuario, n_completo, email, contrasena)
             VALUES('$Reg_Usuario', '$Reg_Nombre', '$Reg_Email', '$Reg_Password');";
         $result = mysqli_query($con, $sql);
@@ -27,8 +27,10 @@
             exit;
         }
     } else {
-        header("Location: ../pages/login.php?error=2");
+        echo "<script>
+            alert('Ocurrió un error al registrar. Por favor, intenta de nuevo.');
+            window.location.href = '../pages/login.php';
+        </script>";
         exit;
     }
-    
 ?>

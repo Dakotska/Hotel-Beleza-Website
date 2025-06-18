@@ -3,7 +3,6 @@ include "../config/db.php";
 $n_pedido = 1;
 $handle_result = 0;
 
-// Obtener el último número de pedido
 $sql = "SELECT * FROM p_comida ORDER BY n_pedido DESC LIMIT 1;";
 $result = mysqli_query($con, $sql);
 if (mysqli_num_rows($result) > 0) {
@@ -15,7 +14,6 @@ $n_habitacion = $_POST["numeroHab"];
 $sql = "SELECT * FROM habitaciones WHERE n_habitacion=$n_habitacion;";
 $result = mysqli_query($con, $sql);
 
-// Si la habitación existe
 if (mysqli_num_rows($result) > 0) {
     $productos_validos = 0;
 
@@ -49,7 +47,6 @@ if (mysqli_num_rows($result) > 0) {
     $handle_result = 2;
 }
 
-// Manejo de errores finales
 if ($handle_result == 1) {
     echo "<script>alert('Error al realizar el pedido'); window.location.href='../pages/restaurant.php';</script>";
 } else if ($handle_result == 2) {
